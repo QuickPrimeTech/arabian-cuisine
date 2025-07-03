@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 
 const images = [
   "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382745/imgi_13_88749_gnirbv.jpg",
@@ -13,10 +13,9 @@ const images = [
   "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382747/imgi_10_88733_xnczpl.jpg",
 ];
 
-const intervalTime = 5000; // 5 seconds
-
 export default function HeroSection() {
   const [currentImage, setCurrentImage] = useState(0);
+  const intervalTime = 5000; // 5 seconds
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,7 +23,7 @@ export default function HeroSection() {
     }, intervalTime);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [currentImage]);
 
   return (
     <section className="relative max-w-full h-screen flex items-center  justify-center lg:justify-start overflow-hidden px-4 md:px-16">
@@ -43,27 +42,27 @@ export default function HeroSection() {
       ))}
 
       {/* Dark Gradient Overlay */}
-      <div className="absolute inset-0 lg:bg-gradient-to-r from-black to-black/30 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-br lg:bg-gradient-to-r from-black/60 to-black/30 z-0" />
 
       {/* Left-Aligned Content */}
       <div className="relative z-10 text-white max-w-2xl space-y-6 animate-fade-in-up">
-        <h1 className="header">Welcome to Arabian Cuisine</h1>
-        <p className="text-xl md:text-2xl leading-relaxed opacity-90">
+        <h1 className="header font-serif text-center lg:text-start">
+          Welcome to Arabian Cuisine
+        </h1>
+        <p className="text-xl md:text-2xl leading-relaxed opacity-90 text-center lg:text-start">
           Experience exceptional cuisine crafted with passion, served in an
           atmosphere of elegance and warmth. Every meal is a celebration of
           culinary artistry.
         </p>
         <div className="flex flex-col items-center justify-center lg:justify-start lg:flex-row gap-4 pt-4">
-          <Link href="/reserve">
-            <Button className="btn-primary text-lg px-8 py-4 hover-lift">
-              Reserve Your Table
-            </Button>
-          </Link>
-          <Link href="/menu">
-            <Button className="btn-outline text-lg px-8 py-4 text-white border-white hover:bg-white hover:text-[var(--primary)] hover-lift">
-              Explore Menu
-            </Button>
-          </Link>
+          <Button asChild>
+            <Link href="/reserve">
+              Reserve Your Table <ArrowRight />
+            </Link>
+          </Button>
+          <Button variant={"outline"} asChild>
+            <Link href="/menu">Explore Menu</Link>
+          </Button>
         </div>
       </div>
 

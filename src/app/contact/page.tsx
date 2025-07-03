@@ -5,9 +5,9 @@ import MapSection from "@/sections/contact/MapSection";
 import CTASection from "@/sections/shared/CTASection";
 
 export const metadata = {
-  title: "Contact Us - Bella Vista Restaurant",
+  title: "Contact Us - Arabian Cuisine Restaurant",
   description:
-    "Get in touch with Bella Vista Restaurant. Contact us for reservations, inquiries, or special requests. We're here to help create your perfect dining experience.",
+    "Get in touch with Arabian Cuisine Restaurant. Contact us for reservations, inquiries, or special requests. We're here to help create your perfect dining experience.",
 };
 
 export default function ContactPage() {

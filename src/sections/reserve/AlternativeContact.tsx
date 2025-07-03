@@ -7,7 +7,7 @@ const contactMethods = [
     icon: Phone,
     title: "Call to Reserve",
     description: "Speak directly with our reservation team",
-    action: "Call (555) 123-4567",
+    action: "Call 0722720697",
     href: "tel:+15551234567",
   },
   {
@@ -22,7 +22,7 @@ const contactMethods = [
     title: "Email Reservations",
     description: "Send us your reservation details",
     action: "Email Us",
-    href: "mailto:reservations@bellavista.com",
+    href: "mailto:reservations@ariabiancuisine.com",
   },
 ];
 

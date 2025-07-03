@@ -6,7 +6,7 @@ import CTASection from "@/sections/shared/CTASection";
 import LoadingSkeleton from "@/components/ui/LoadingSkeleton";
 
 export const metadata = {
-  title: "Menu - Bella Vista Restaurant",
+  title: "Menu - Arabian Cuisine Restaurant",
   description:
     "Explore our exquisite menu featuring fresh ingredients, innovative cuisine, and chef's signature dishes. From appetizers to desserts, discover culinary excellence.",
 };

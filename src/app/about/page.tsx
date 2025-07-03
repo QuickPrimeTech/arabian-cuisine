@@ -8,9 +8,9 @@ import CTASection from "@/sections/shared/CTASection";
 import LoadingSkeleton from "@/components/ui/LoadingSkeleton";
 
 export const metadata = {
-  title: "About Us - Bella Vista Restaurant",
+  title: "About Us - Arabian Cuisine Restaurant",
   description:
-    "Discover the story behind Bella Vista Restaurant. Learn about our passion for culinary excellence, our dedicated team, and our commitment to creating unforgettable dining experiences.",
+    "Discover the story behind Arabian Cuisine Restaurant. Learn about our passion for culinary excellence, our dedicated team, and our commitment to creating unforgettable dining experiences.",
 };
 
 export default function AboutPage() {

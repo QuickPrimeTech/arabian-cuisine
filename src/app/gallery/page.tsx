@@ -3,9 +3,9 @@ import GalleryGrid from "@/sections/gallery/GalleryGrid";
 import CTASection from "@/sections/shared/CTASection";
 
 export const metadata = {
-  title: "Gallery - Bella Vista Restaurant",
+  title: "Gallery - Arabian Cuisine Restaurant",
   description:
-    "Explore our beautiful restaurant spaces, exquisite dishes, and memorable moments. View our gallery showcasing the Bella Vista experience.",
+    "Explore our beautiful restaurant spaces, exquisite dishes, and memorable moments. View our gallery showcasing the Arabian Cuisine experience.",
 };
 
 export default function GalleryPage() {
@@ -15,7 +15,7 @@ export default function GalleryPage() {
       <GalleryGrid />
       <CTASection
         title="Experience It Yourself"
-        description="Pictures capture moments, but nothing compares to experiencing Bella Vista firsthand."
+        description="Pictures capture moments, but nothing compares to experiencing Arabian Cuisine firsthand."
         primaryCTA={{ text: "Reserve Table", href: "/reserve" }}
         secondaryCTA={{ text: "Private Events", href: "/private-events" }}
       />

@@ -11,7 +11,7 @@ export default function StorySection() {
               <div className="space-y-6 text-lg text-[var(--text-secondary)] leading-relaxed">
                 <p>
                   Founded in 1985 by Chef Antonio Bella and his wife Maria
-                  Vista, Bella Vista Restaurant began as a dream to bring
+                  Vista, Arabian Cuisine Restaurant began as a dream to bring
                   authentic Italian cuisine and warm hospitality to the heart of
                   the city. What started as a small family restaurant has grown
                   into one of the most celebrated dining destinations in the
@@ -40,7 +40,7 @@ export default function StorySection() {
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-luxury">
               <Image
                 src="/placeholder.svg?height=600&width=800"
-                alt="Bella Vista Restaurant interior"
+                alt="Arabian Cuisine Restaurant interior"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"

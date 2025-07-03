@@ -5,7 +5,7 @@ const contactMethods = [
   {
     icon: Phone,
     title: "Call Us",
-    primary: "(555) 123-4567",
+    primary: "0722720697",
     secondary: "Reservations & General Inquiries",
     description: "Available during business hours",
     action: "tel:+15551234567",
@@ -13,10 +13,10 @@ const contactMethods = [
   {
     icon: Mail,
     title: "Email Us",
-    primary: "info@bellavista.com",
+    primary: "info@ariabiancuisine.com",
     secondary: "General Information",
     description: "We respond within 24 hours",
-    action: "mailto:info@bellavista.com",
+    action: "mailto:info@ariabiancuisine.com",
   },
   {
     icon: MessageCircle,

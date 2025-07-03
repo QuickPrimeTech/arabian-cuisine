@@ -25,32 +25,19 @@ export default function CTASection({
   const isPrimary = variant === "primary";
 
   return (
-    <section className="section bg-light-black text-white">
+    <section className="section bg-light-black">
       <div className="container-custom text-center">
         <div className="max-w-4xl mx-auto space-y-8">
           <h2 className="text-4xl md:text-5xl font-bold font-serif">{title}</h2>
           <p className="text-xl leading-relaxed text-gray-400">{description}</p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
-            <Link href={primaryCTA.href}>
-              <Button
-                className={`text-lg px-8 py-4 hover-lift ${
-                  isPrimary
-                    ? "bg-amber-500 text-black hover:bg-amber-600"
-                    : "btn-primary"
-                }`}
-              >
-                {primaryCTA.text}
-              </Button>
-            </Link>
+            <Button asChild>
+              <Link href={primaryCTA.href}>{primaryCTA.text}</Link>
+            </Button>
             {secondaryCTA && (
-              <Link href={secondaryCTA.href}>
-                <Button
-                  variant="outline"
-                  className="border-gray-400 text-foreground"
-                >
-                  {secondaryCTA.text}
-                </Button>
-              </Link>
+              <Button variant="outline" asChild>
+                <Link href={secondaryCTA.href}>{secondaryCTA.text}</Link>
+              </Button>
             )}
           </div>
         </div>

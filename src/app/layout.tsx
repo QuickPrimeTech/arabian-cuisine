@@ -2,9 +2,9 @@ import type React from "react";
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layouts/Navbar";
-import Footer from "@/components/layouts/Footer";
-import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import Navbar from "@/layouts/Navbar";
+import Footer from "@/layouts/Footer";
+import WhatsAppButton from "@/layouts/WhatsAppButton";
 import { Toaster } from "@/components/ui/sonner";
 
 const playfair = Playfair_Display({
@@ -20,13 +20,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bella Vista Restaurant - Luxury Fine Dining Experience",
+  title: "Arabian Cuisine Restaurant - Luxury Fine Dining Experience",
   description:
-    "Experience exceptional cuisine and elegant ambiance at Bella Vista Restaurant. Reserve your table for an unforgettable culinary journey.",
+    "Experience exceptional cuisine and elegant ambiance at Arabian Cuisine Restaurant. Reserve your table for an unforgettable culinary journey.",
   keywords:
     "fine dining, luxury restaurant, Italian cuisine, private events, reservations",
   openGraph: {
-    title: "Bella Vista Restaurant",
+    title: "Arabian Cuisine Restaurant",
     description: "Luxury fine dining experience with exceptional cuisine",
     images: ["/og-image.jpg"],
   },

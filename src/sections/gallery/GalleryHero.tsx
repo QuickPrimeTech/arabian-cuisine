@@ -14,8 +14,8 @@ export default function GalleryHero() {
         <div className="space-y-6 animate-fade-in-up">
           <h1 className="text-display">Gallery</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
-            Discover the beauty of Bella Vista through our curated collection of
-            moments, spaces, and culinary artistry.
+            Discover the beauty of Arabian Cuisine through our curated
+            collection of moments, spaces, and culinary artistry.
           </p>
         </div>
       </div>

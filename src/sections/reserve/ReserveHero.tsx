@@ -15,7 +15,7 @@ export default function ReserveHero() {
           <h1 className="text-display">Reserve Your Table</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed opacity-90">
             Secure your spot for an exceptional dining experience. We look
-            forward to welcoming you to Bella Vista.
+            forward to welcoming you to Arabian Cuisine.
           </p>
         </div>
       </div>

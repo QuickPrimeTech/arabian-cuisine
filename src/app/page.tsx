@@ -4,16 +4,16 @@ import MenuHighlights from "@/sections/home/MenuHighlights";
 import AboutCards from "@/sections/home/AboutCards";
 import TestimonialsCarousel from "@/sections/home/TestimonialsCarousel";
 import CTASection from "@/sections/shared/CTASection";
-import WhyChooseUs from "@/sections/home/WhyChooseUs";
+import Gallery from "@/sections/home/WhyChooseUs";
 import FAQSection from "@/sections/home/FAQSection";
 import ContactInfo from "@/sections/home/ContactInfo";
 import InstagramFeed from "@/sections/home/InstagramFeed";
 import LoadingSkeleton from "@/components/ui/LoadingSkeleton";
 
 export const metadata = {
-  title: "Bella Vista Restaurant - Luxury Fine Dining Experience",
+  title: "Arabian Cuisine Restaurant - Luxury Fine Dining Experience",
   description:
-    "Experience exceptional cuisine and elegant ambiance at Bella Vista Restaurant. Reserve your table for an unforgettable culinary journey in the heart of the city.",
+    "Experience exceptional cuisine and elegant ambiance at Arabian Cuisine Restaurant. Reserve your table for an unforgettable culinary journey in the heart of the city.",
 };
 
 export default function HomePage() {
@@ -28,7 +28,7 @@ export default function HomePage() {
         <TestimonialsCarousel />
       </Suspense>
       <CTASection />
-      <WhyChooseUs />
+      <Gallery />
       <FAQSection />
       <ContactInfo />
       <Suspense fallback={<LoadingSkeleton type="instagram" />}>

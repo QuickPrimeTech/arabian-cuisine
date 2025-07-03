@@ -21,8 +21,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 37.7749,
-  lng: -122.4194,
+  lat: -1.300610019424821,
+  lng: 36.816495305963706,
 };
 
 export default function ContactSummary() {
@@ -58,8 +58,8 @@ export default function ContactSummary() {
   };
 
   return (
-    <section className="section bg-light-black text-white min-h-screen">
-      <h2 className="header2 text-center mb-12 text-white">
+    <section className="section">
+      <h2 className="header2 text-center mb-16 font-serif">
         Get In Touch With Us
       </h2>
       <div className="container mx-auto px-4">
@@ -82,11 +82,22 @@ export default function ContactSummary() {
                   </div>
                 )}
               </div>
+              <div className="p-4">
+                <Button asChild>
+                  <a
+                    href={`https://www.google.com/maps?q=${center.lat},${center.lng}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open in Google Maps
+                  </a>
+                </Button>
+              </div>
             </CardContent>
           </Card>
 
           {/* Contact Form */}
-          <Card className="shadow-lg bg-[#1f1f1f] border border-gray-700 py-4">
+          <Card className="shadow-lg bg-light-dark border border-gray-700 py-4">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-white">
                 Send Us a Message
@@ -95,7 +106,7 @@ export default function ContactSummary() {
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div>
+                  <div className="space-y-2">
                     <Label htmlFor="name" className="text-gray-300">
                       Full Name
                     </Label>
@@ -110,7 +121,7 @@ export default function ContactSummary() {
                       className="bg-transparent border-gray-600 text-white placeholder-gray-500"
                     />
                   </div>
-                  <div>
+                  <div className="space-y-2">
                     <Label htmlFor="email" className="text-gray-300">
                       Email
                     </Label>
@@ -128,7 +139,7 @@ export default function ContactSummary() {
                   </div>
                 </div>
 
-                <div>
+                <div className="space-y-2">
                   <Label htmlFor="subject" className="text-gray-300">
                     Subject
                   </Label>
@@ -138,10 +149,10 @@ export default function ContactSummary() {
                       handleInputChange("subject", value)
                     }
                   >
-                    <SelectTrigger className="bg-transparent border-gray-600 text-white">
+                    <SelectTrigger className="bg-transparent w-full border-gray-600 text-white">
                       <SelectValue placeholder="Select a subject" />
                     </SelectTrigger>
-                    <SelectContent className="bg-[#1f1f1f] border-gray-700 text-white">
+                    <SelectContent className="bg-light-black border-gray-700 text-white">
                       <SelectItem value="reservation">
                         Reservation Inquiry
                       </SelectItem>
@@ -154,7 +165,7 @@ export default function ContactSummary() {
                   </Select>
                 </div>
 
-                <div>
+                <div className="space-y-2">
                   <Label htmlFor="message" className="text-gray-300">
                     Message
                   </Label>
@@ -171,7 +182,7 @@ export default function ContactSummary() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full btn-primary hover-lift">
+                <Button type="submit" className="w-full">
                   Send Message
                 </Button>
               </form>

@@ -42,35 +42,25 @@ const faqs = [
 
 export default function FAQSection() {
   return (
-    <section className="section bg-[#121212] text-white">
-      <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="header2 mb-6 text-white">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-lg text-gray-400">
-            Find answers to common questions about dining at Bella Vista. Can't
-            find what you're looking for? Feel free to contact us directly.
-          </p>
-        </div>
-
-        <Accordion type="multiple" className="space-y-4">
-          {faqs.map(({ question, answer }, index) => (
-            <AccordionItem
-              key={index}
-              value={question}
-              className="bg-[#1f1f1f] border border-gray-700 rounded-lg shadow-md transition-shadow duration-200 px-6"
-            >
-              <AccordionTrigger className="text-left font-heading font-semibold text-white py-6 hover:text-amber-500 transition-colors">
-                {question}
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-300 leading-relaxed pb-6">
-                {answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+    <section className="section flex flex-col items-center">
+      <div className="text-center mb-16">
+        <h2 className="header2 mb-6 text-white">Frequently Asked Questions</h2>
+        <p className="text-lg text-gray-400">
+          Find answers to common questions about dining at Arabian Cuisine.
+          Can't find what you're looking for? Feel free to contact us directly.
+        </p>
       </div>
+
+      <Accordion type="multiple" className="space-y-4 max-w-4xl w-full">
+        {faqs.map(({ question, answer }, index) => (
+          <AccordionItem key={index} value={question}>
+            <AccordionTrigger className="hover:text-secondary transition-colors duration-300">
+              {question}
+            </AccordionTrigger>
+            <AccordionContent>{answer}</AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
     </section>
   );
 }

@@ -8,8 +8,8 @@ export default function MapSection() {
         <div className="text-center mb-12">
           <h2 className="text-heading-2 mb-4">Find Us</h2>
           <p className="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto">
-            Located in the heart of downtown, Bella Vista is easily accessible
-            and surrounded by the city's cultural attractions.
+            Located in the heart of downtown, Arabian Cuisine is easily
+            accessible and surrounded by the city's cultural attractions.
           </p>
         </div>
 

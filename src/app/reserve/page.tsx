@@ -4,9 +4,9 @@ import AlternativeContact from "@/sections/reserve/AlternativeContact";
 import CTASection from "@/sections/shared/CTASection";
 
 export const metadata = {
-  title: "Reservations - Bella Vista Restaurant",
+  title: "Reservations - Arabian Cuisine Restaurant",
   description:
-    "Reserve your table at Bella Vista Restaurant. Book online for an unforgettable dining experience with exceptional cuisine and elegant ambiance.",
+    "Reserve your table at Arabian Cuisine Restaurant. Book online for an unforgettable dining experience with exceptional cuisine and elegant ambiance.",
 };
 
 export default function ReservePage() {

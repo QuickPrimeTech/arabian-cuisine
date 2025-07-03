@@ -5,6 +5,8 @@
 
 @theme inline {
   --color-background: var(--background);
+  --font-serif: var(--font-heading);
+  --font-sans: var(--font-body);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -47,15 +49,15 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: var(--color-gray-950);
+  --foreground: var(--color-white);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #8b4513;
+  --primary: oklch(0.4708 0.1121 50.85);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: #d4af37;
+  --secondary: var(--color-yellow-500);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
@@ -82,7 +84,7 @@
   --primary-light: #b18a6e;
   --secondary-dark: #b8860b;
   --accent-dark: #f0e68c;
-  --light-black: #1e1e1e;
+  --light-black: var(--color-gray-900);
   --common-black: [#121212];
 }
 
@@ -128,13 +130,13 @@
     @apply bg-background text-foreground;
   }
   .section-x {
-    @apply px-4 md:px-6 lg:px-8;
+    @apply px-4 md:px-8 lg:px-12;
   }
   .section-y {
     @apply py-16 md:py-20 lg:py-20;
   }
   .section {
-    @apply px-4 md:px-6 lg:px-8 py-16 md:py-20 lg:py-20;
+    @apply px-4 md:px-8 lg:px-12 py-16 md:py-20 lg:py-20;
   }
   .header {
     @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight;

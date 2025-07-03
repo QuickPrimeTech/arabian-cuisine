@@ -5,9 +5,9 @@ import EventBookingForm from "@/sections/events/EventBookingForm";
 import CTASection from "@/sections/shared/CTASection";
 
 export const metadata = {
-  title: "Private Events - Bella Vista Restaurant",
+  title: "Private Events - Arabian Cuisine Restaurant",
   description:
-    "Host your special event at Bella Vista Restaurant. From intimate celebrations to corporate gatherings, we provide exceptional venues and personalized service.",
+    "Host your special event at Arabian Cuisine Restaurant. From intimate celebrations to corporate gatherings, we provide exceptional venues and personalized service.",
 };
 
 export default function PrivateEventsPage() {

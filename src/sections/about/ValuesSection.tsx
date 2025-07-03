@@ -36,7 +36,7 @@ export default function ValuesSection() {
           <p className="text-lg text-[var(--text-secondary)] max-w-3xl mx-auto">
             These core principles guide everything we do, from selecting
             ingredients to serving our guests, ensuring every experience at
-            Bella Vista reflects our commitment to excellence.
+            Arabian Cuisine reflects our commitment to excellence.
           </p>
         </div>
 
