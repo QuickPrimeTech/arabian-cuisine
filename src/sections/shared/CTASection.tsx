@@ -12,7 +12,6 @@ interface CTASectionProps {
     text: string;
     href: string;
   };
-  variant?: "primary" | "secondary";
 }
 
 export default function CTASection({
@@ -20,10 +19,7 @@ export default function CTASection({
   description = "Reserve your table today and embark on a culinary journey that will delight your senses and create lasting memories.",
   primaryCTA = { text: "Reserve Your Table", href: "/reserve" },
   secondaryCTA = { text: "Explore Menu", href: "/menu" },
-  variant = "primary",
 }: CTASectionProps) {
-  const isPrimary = variant === "primary";
-
   return (
     <section className="section bg-light-black">
       <div className="container-custom text-center">

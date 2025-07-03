@@ -47,7 +47,8 @@ export default function FAQSection() {
         <h2 className="header2 mb-6 text-white">Frequently Asked Questions</h2>
         <p className="text-lg text-gray-400">
           Find answers to common questions about dining at Arabian Cuisine.
-          Can't find what you're looking for? Feel free to contact us directly.
+          Can&apos;t find what you&apos;re looking for? Feel free to contact us
+          directly.
         </p>
       </div>
 
