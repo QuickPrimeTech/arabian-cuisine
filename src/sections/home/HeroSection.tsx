@@ -42,7 +42,7 @@ export default function HeroSection() {
       ))}
 
       {/* Dark Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br lg:bg-gradient-to-r from-black/60 to-black/30 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/80 to-black/0 z-0" />
 
       {/* Left-Aligned Content */}
       <div className="relative z-10 text-white max-w-2xl space-y-6 animate-fade-in-up">

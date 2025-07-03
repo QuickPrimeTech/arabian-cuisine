@@ -58,7 +58,7 @@ const openingHours = [{ days: "Sunday - Monday", hours: "9:00 PM - 9:00 PM" }];
 
 export default function Footer() {
   return (
-    <footer className=" bg-light-dark section">
+    <footer className=" bg-light-black section">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
         {/* Restaurant Info */}
         <div className="space-y-6">
@@ -142,7 +142,9 @@ export default function Footer() {
           <div className="space-y-4">
             {contactInfo.map((contact, index) => (
               <div className="flex items-start space-x-3" key={index}>
-                <contact.icon className="h-5 w-5 text-secondary mt-0.5" />
+                <div className="p-2 rounded-full bg-secondary/20">
+                  <contact.icon className="h-5 w-5 text-secondary mt-0.5" />
+                </div>
                 <div>
                   <p className="font-medium">{contact.primary}</p>
                   <p className="text-gray-300 text-sm">{contact.secondary}</p>

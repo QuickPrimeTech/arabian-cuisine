@@ -65,14 +65,14 @@ export default function ContactSummary() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Map Card */}
-          <Card className="overflow-hidden shadow-lg bg-[#1f1f1f] border border-gray-700">
+          <Card className="overflow-hidden shadow-lg bg-light-black border border-gray-700">
             <CardContent className="p-0">
               <div className="aspect-video">
                 {isLoaded ? (
                   <GoogleMap
                     mapContainerStyle={containerStyle}
                     center={center}
-                    zoom={50}
+                    zoom={20}
                   >
                     <Marker position={center} />
                   </GoogleMap>
@@ -85,7 +85,7 @@ export default function ContactSummary() {
               <div className="p-4">
                 <Button asChild>
                   <a
-                    href={`https://www.google.com/maps?q=${center.lat},${center.lng}`}
+                    href={`https://www.google.com/maps/place/The+Arabian+Cuisine/@-1.2973776,36.7832904,14z/data=!4m10!1m2!2m1!1sarabian+cuisine+upper+hill+facebook!3m6!1s0x182f10ef5e0ff10d:0x95530e4b72df263!8m2!3d-1.3006283!4d36.8164967!15sCiNhcmFiaWFuIGN1aXNpbmUgdXBwZXIgaGlsbCBmYWNlYm9va1olIiNhcmFiaWFuIGN1aXNpbmUgdXBwZXIgaGlsbCBmYWNlYm9va5IBCnJlc3RhdXJhbnSaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVTmZjazFmVDJ4M1JSQUKqAWgKDS9nLzExZHpkMjExejcQASoMIghmYWNlYm9vaygAMh4QASIaw-EhjVR28IqnG506gt9gkg_L0nuYMV_onh4yJxACIiNhcmFiaWFuIGN1aXNpbmUgdXBwZXIgaGlsbCBmYWNlYm9va-ABAPoBBQjBARAm!16s%2Fg%2F11dzd211z7?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -97,7 +97,7 @@ export default function ContactSummary() {
           </Card>
 
           {/* Contact Form */}
-          <Card className="shadow-lg bg-light-dark border border-gray-700 py-4">
+          <Card className="shadow-lg bg-light-black border border-gray-700 py-4">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-white">
                 Send Us a Message

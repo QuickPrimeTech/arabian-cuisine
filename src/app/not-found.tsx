@@ -12,7 +12,7 @@ export default function NotFound() {
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4">
-      <Card className="shadow-lg bg-light-dark borderborder-gray-700 max-w-md w-full py-8">
+      <Card className="shadow-lg bg-light-black borderborder-gray-700 max-w-md w-full py-8">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-white font-serif text-center">
             Page Not Found

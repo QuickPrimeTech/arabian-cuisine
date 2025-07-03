@@ -126,8 +126,8 @@ export default function TestimonialsCarousel() {
                   <StarRating rating={testimonial.rating} />
                 </CardHeader>
                 <CardContent className="p-6 text-center">
-                  <blockquote className="text-lg italic text-gray-300 leading-relaxed">
-                    “{testimonial.quote}”
+                  <blockquote className="text-lg text-gray-300 leading-relaxed">
+                    &quot;{testimonial.quote}&quot;
                   </blockquote>
                 </CardContent>
                 <CardFooter className="flex flex-col items-center text-center">

@@ -66,8 +66,8 @@ export default function Gallery() {
 
       <Button asChild>
         <Link href="/gallery">
-          View Full Gallery
           <Camera className="size-5" />
+          View Full Gallery
         </Link>
       </Button>
     </section>

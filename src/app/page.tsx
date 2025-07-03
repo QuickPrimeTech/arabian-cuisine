@@ -4,7 +4,7 @@ import MenuHighlights from "@/sections/home/MenuHighlights";
 import AboutCards from "@/sections/home/AboutCards";
 import TestimonialsCarousel from "@/sections/home/TestimonialsCarousel";
 import CTASection from "@/sections/shared/CTASection";
-import Gallery from "@/sections/home/WhyChooseUs";
+import Gallery from "@/sections/home/Gallery";
 import FAQSection from "@/sections/home/FAQSection";
 import ContactInfo from "@/sections/home/ContactInfo";
 import InstagramFeed from "@/sections/home/InstagramFeed";

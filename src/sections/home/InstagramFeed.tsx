@@ -27,42 +27,42 @@ const mockPosts: InstagramPost[] = [
     id: "1",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382750/imgi_52_88740_ww0j0r.jpg",
-    permalink: "https://instagram.com/ariabiancuisine",
+    permalink: "https://www.instagram.com/thearabiancuisine_upperhill/?hl=en",
     caption: "Fresh truffle risotto",
   },
   {
     id: "2",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382757/imgi_64_88755_bmmbg2.jpg",
-    permalink: "https://instagram.com/ariabiancuisine",
+    permalink: "https://www.instagram.com/thearabiancuisine_upperhill/?hl=en",
     caption: "Elegant dining room",
   },
   {
     id: "3",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382748/imgi_49_88737_sbmdc4.jpg",
-    permalink: "https://instagram.com/ariabiancuisine",
+    permalink: "https://www.instagram.com/thearabiancuisine_upperhill/?hl=en",
     caption: "Chef's special",
   },
   {
     id: "4",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382752/imgi_54_88848_fjxtjm.jpg",
-    permalink: "https://instagram.com/ariabiancuisine",
+    permalink: "https://www.instagram.com/thearabiancuisine_upperhill/?hl=en",
     caption: "Wine selection",
   },
   {
     id: "5",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382745/imgi_65_88756_asiqmf.jpg",
-    permalink: "https://instagram.com/ariabiancuisine",
+    permalink: "https://www.instagram.com/thearabiancuisine_upperhill/?hl=en",
     caption: "Dessert presentation",
   },
   {
     id: "6",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382753/imgi_59_88746_nhq00n.jpg",
-    permalink: "https://instagram.com/ariabiancuisine",
+    permalink: "https://www.instagram.com/thearabiancuisine_upperhill/?hl=en",
     caption: "Private dining",
   },
 ];
@@ -89,8 +89,8 @@ export default function InstagramFeed() {
       {/* Header */}
       <div className="text-center mb-16">
         <div className="flex items-center justify-center space-x-3 mb-6">
-          <Instagram className="h-8 w-8 text-[var(--primary)]" />
-          <h2 className="header2 text-white">Follow Our Journey</h2>
+          <Instagram className="h-8 w-8 text-secondary" />
+          <h2 className="header2 font-serif">Follow Our Journey</h2>
         </div>
         <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
           Stay connected with Arabian Cuisine on Instagram for behind-the-scenes
@@ -98,7 +98,7 @@ export default function InstagramFeed() {
         </p>
         <Button asChild>
           <Link
-            href="https://instagram.com/ariabiancuisine"
+            href="https://www.instagram.com/thearabiancuisine_upperhill/?hl=en"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -114,7 +114,7 @@ export default function InstagramFeed() {
           {posts.map((post) => (
             <CarouselItem
               key={post.id}
-              className="basis-full sm:basis-1/2 md:basis-1/3 px-2"
+              className="basis-full sm:basis-1/2 md:basis-1/3"
             >
               <Link
                 href={post.permalink}
@@ -144,7 +144,7 @@ export default function InstagramFeed() {
       {/* CTA Button */}
       <Button asChild>
         <Link
-          href="https://instagram.com/ariabiancuisine"
+          href="https://www.instagram.com/thearabiancuisine_upperhill/?hl=en"
           target="_blank"
           rel="noopener noreferrer"
         >
