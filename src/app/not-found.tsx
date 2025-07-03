@@ -20,8 +20,8 @@ export default function NotFound() {
         </CardHeader>
         <CardContent className="space-y-6 text-center">
           <p className="text-gray-300 text-sm leading-relaxed">
-            Oops! This page doesn't exist yet. This is just a homepage demo. To
-            get all the pages completed, please contact the developer.
+            Oops! This page doesn&apos;t exist yet. This is just a homepage
+            demo. To get all the pages completed, please contact the developer.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild className="btn-primary hover-lift">

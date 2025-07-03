@@ -3,8 +3,14 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetHeader,
+} from "@/components/ui/sheet";
 import Image from "next/image";
 
 //Navigation links
@@ -19,7 +25,6 @@ const navLinks = [
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -45,43 +50,54 @@ export default function Navbar() {
           className="flex items-center gap-2 font-serif text-xl font-bold"
         >
           <div className="relative h-9 w-9 rounded-full overflow-hidden">
-            <Image src={"/logo.svg"} alt="arabian cuisine log" fill />
+            <Image src={"/logo.svg"} alt="arabian cuisine logo" fill />
           </div>
           Arabian Cuisine
         </Link>
+
         <DesktopNav />
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden text-foreground"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
 
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden bg-background/95 text-foreground backdrop-blur-md border-t">
-          <div className="px-2 pt-2 text-foreground pb-3 space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`block px-3 py-2 text-foreground hover:text-ocean-600 transition-colors ${
-                  pathname === link.href && "text-secondary"
-                }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+        {/* Mobile Sheet Menu Trigger */}
+        <div className="lg:hidden text-foreground">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu size={24} />
+              </Button>
+            </SheetTrigger>
+            <SheetContent
+              side="left"
+              className="bg-background/75 backdrop-blur-md border-r"
+            >
+              <SheetHeader className="flex flex-row items-center justify-between mb-4">
+                <div className="flex items-center gap-2 font-serif text-xl font-bold">
+                  <div className="relative h-9 w-9 rounded-full overflow-hidden">
+                    <Image src={"/logo.svg"} alt="arabian cuisine logo" fill />
+                  </div>
+                  Arabian Cuisine
+                </div>
+              </SheetHeader>
 
-            <Button asChild>
-              <Link href="/reserve">Reserve Table</Link>
-            </Button>
-          </div>
+              <div className="space-y-2 px-2">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`block px-3 py-2 rounded hover:bg-gray-800 transition ${
+                      pathname === link.href && "text-secondary"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+                <Button asChild className="w-full">
+                  <Link href="/reserve">Reserve Table</Link>
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
-      )}
+      </div>
     </nav>
   );
 }
@@ -89,25 +105,22 @@ export default function Navbar() {
 function DesktopNav() {
   const pathname = usePathname();
   return (
-    <>
-      {/* Desktop Navigation */}
-      <div className="hidden lg:flex items-center space-x-8">
-        {navLinks.map((link) => (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={`text-ocean-800 hover:text-foreground/90 transition-colors font-medium ${
-              pathname === link.href && "text-secondary"
-            }`}
-          >
-            {link.label}
-          </Link>
-        ))}
+    <div className="hidden lg:flex items-center space-x-8">
+      {navLinks.map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          className={`hover:text-foreground/90 transition-colors font-medium ${
+            pathname === link.href && "text-secondary"
+          }`}
+        >
+          {link.label}
+        </Link>
+      ))}
 
-        <Button asChild>
-          <Link href="/reserve">Reserve Table</Link>
-        </Button>
-      </div>
-    </>
+      <Button asChild>
+        <Link href="/reserve">Reserve Table</Link>
+      </Button>
+    </div>
   );
 }

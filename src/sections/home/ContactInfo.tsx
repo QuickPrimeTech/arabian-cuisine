@@ -21,8 +21,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: -1.300610019424821,
-  lng: 36.816495305963706,
+  lat: -1.300612532662261,
+  lng: 36.81649406166091,
 };
 
 export default function ContactSummary() {
@@ -72,7 +72,7 @@ export default function ContactSummary() {
                   <GoogleMap
                     mapContainerStyle={containerStyle}
                     center={center}
-                    zoom={10}
+                    zoom={50}
                   >
                     <Marker position={center} />
                   </GoogleMap>
