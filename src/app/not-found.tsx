@@ -24,7 +24,7 @@ export default function NotFound() {
             demo. To get all the pages completed, please contact the developer.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild className="btn-primary hover-lift">
+            <Button asChild>
               <Link href="/">Back to Homepage</Link>
             </Button>
             <Button asChild variant="outline">
