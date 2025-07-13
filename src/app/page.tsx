@@ -7,7 +7,7 @@ import CTASection from "@/sections/shared/CTASection";
 import Gallery from "@/sections/home/Gallery";
 import FAQSection from "@/sections/home/FAQSection";
 import ContactInfo from "@/sections/home/ContactInfo";
-import InstagramFeed from "@/sections/home/InstagramFeed";
+import InstagramFeed from "@/sections/home/Tiktok";
 import LoadingSkeleton from "@/components/ui/LoadingSkeleton";
 
 export const metadata = {

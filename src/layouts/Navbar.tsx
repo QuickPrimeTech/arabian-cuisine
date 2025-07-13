@@ -16,9 +16,9 @@ import Image from "next/image";
 //Navigation links
 const navLinks = [
   { href: "/", label: "Home" },
+  { href: "/weddings", label: "Weddings" },
   { href: "/menu", label: "Menu" },
   { href: "/about", label: "About Us" },
-  { href: "/private-events", label: "Private Events" },
   { href: "/gallery", label: "Gallery" },
   { href: "/contact", label: "Contact" },
 ];
@@ -62,7 +62,7 @@ export default function Navbar() {
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Menu size={24} />
+                <Menu className="size-6" />
               </Button>
             </SheetTrigger>
             <SheetContent
