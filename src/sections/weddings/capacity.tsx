@@ -37,12 +37,12 @@ export function CapacityLayout() {
     >
       <div className="text-center mb-16">
         <h2
-          className="text-4xl md:text-5xl font-serif text-gray-50 mb-4"
+          className="text-4xl md:text-5xl font-serif text-foreground mb-4"
           id="capacity-header"
         >
           Capacity & Guest Information
         </h2>
-        <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           Flexible spaces that adapt to your vision, from intimate gatherings to
           grand celebrations
         </p>
@@ -60,7 +60,7 @@ export function CapacityLayout() {
               </div>
             </CardHeader>
             <CardContent>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-xl font-semibold text-secondary mb-2">
                 {option.title}
               </h3>
               <p className="text-2xl font-serif text-foreground mb-4">
