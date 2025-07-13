@@ -1,25 +1,9 @@
-"use client";
-
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Users } from "lucide-react";
+import { ArrowDown, Clock, Users } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import Link from "next/link";
 
 export function AvailabilityBooking() {
-  const [selectedDate, setSelectedDate] = useState("");
-
-  // Mock available dates - in real app, this would come from an API
-  const availableDates = [
-    "2024-03-15",
-    "2024-03-22",
-    "2024-04-05",
-    "2024-04-12",
-    "2024-04-19",
-    "2024-05-03",
-    "2024-05-10",
-    "2024-05-17",
-  ];
-
   return (
     <section className="py-20 bg-light-black">
       <div className="container mx-auto px-4">
@@ -81,9 +65,11 @@ export function AvailabilityBooking() {
                   <li>• Secure your date with a deposit</li>
                 </ul>
               </div>
-
-              <Button disabled={!selectedDate}>
-                {selectedDate ? "Check Available Dates" : "Select a Date First"}
+              <Button asChild>
+                <Link href={"#inquire-now"}>
+                  Inquire Now
+                  <ArrowDown />
+                </Link>
               </Button>
             </div>
           </Card>
