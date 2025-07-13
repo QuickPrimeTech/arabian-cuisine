@@ -31,7 +31,7 @@ const slides = [
     primaryCta: { label: "Reserve a Table", href: "/reserve" },
     secondaryCta: { label: "View Menu", href: "/menu" },
     image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382744/imgi_40_88750_dj7anm.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1751382745/chili-paneer-wet_eshtgw.jpg",
   },
   {
     title: "Follow Us Online",

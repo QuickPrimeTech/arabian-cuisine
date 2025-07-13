@@ -26,10 +26,17 @@ const center = {
 };
 
 export default function ContactSummary() {
-  const { isLoaded } = useJsApiLoader({
-    id: "google-map-script",
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "",
-  });
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+
+  const { isLoaded } = useJsApiLoader(
+    apiKey
+      ? {
+          id: "google-map-script",
+          googleMapsApiKey: apiKey,
+          libraries: ["maps"],
+        }
+      : { id: "google-map-script", googleMapsApiKey: "invalid" } // fallback for SSR safety
+  );
 
   const [formData, setFormData] = useState({
     name: "",

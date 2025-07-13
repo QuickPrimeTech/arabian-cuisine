@@ -15,7 +15,8 @@ export function DynamicImage({ images }: DynamicImageProps) {
     }, intervalTime);
 
     return () => clearInterval(interval);
-  }, [currentImage]);
+  }, [images.length]); // ✅ Fixed
+
   return (
     <>
       {images.map((src, index) => (
@@ -30,7 +31,6 @@ export function DynamicImage({ images }: DynamicImageProps) {
           }`}
         />
       ))}
-      ;
     </>
   );
 }
