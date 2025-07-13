@@ -1,6 +1,8 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
@@ -9,8 +11,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  CarouselApi,
 } from "@/components/ui/carousel";
 
 const slides = [
@@ -46,10 +47,35 @@ const slides = [
 ];
 
 export default function HeroSection() {
+  const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [totalItems, setTotalItems] = useState(0);
+
+  useEffect(() => {
+    if (!carouselApi) return;
+
+    const updateCarouselState = () => {
+      setCurrentIndex(carouselApi.selectedScrollSnap());
+      setTotalItems(carouselApi.scrollSnapList().length);
+    };
+
+    updateCarouselState();
+
+    carouselApi.on("select", updateCarouselState);
+
+    return () => {
+      carouselApi.off("select", updateCarouselState); // Clean up on unmount
+    };
+  }, [carouselApi]);
+
+  const scrollToIndex = (index: number) => {
+    carouselApi?.scrollTo(index);
+  };
   return (
     <section className="relative h-screen flex items-center  justify-center lg:justify-start overflow-hidden">
       <Carousel
         className="w-full"
+        setApi={setCarouselApi}
         opts={{
           loop: true,
         }}
@@ -100,20 +126,31 @@ export default function HeroSection() {
                   )}
                 </div>
               </div>
-
-              {/* Scroll Indicator */}
-              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-                <div className="flex flex-col items-center space-y-2 text-white/70">
-                  <span className="text-sm font-medium">Scroll to explore</span>
-                  <ArrowDown className="h-5 w-5" />
-                </div>
-              </div>
             </CarouselItem>
           ))}
         </CarouselContent>
       </Carousel>
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
+        <div className="flex flex-col items-center space-y-2 text-white/70">
+          <span className="text-sm font-medium">Scroll to explore</span>
+          <ArrowDown className="h-5 w-5" />
+        </div>
+      </div>
+      {/* dots navigator */}
 
-      {/* Fading Background Images */}
+      {/* Navigation Dots */}
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-20">
+        {Array.from({ length: totalItems }).map((_, index) => (
+          <button
+            key={index}
+            onClick={() => scrollToIndex(index)}
+            className={`size-3 rounded-full ${
+              currentIndex === index ? "bg-secondary" : "bg-gray-300"
+            }`}
+          />
+        ))}
+      </div>
     </section>
   );
 }
