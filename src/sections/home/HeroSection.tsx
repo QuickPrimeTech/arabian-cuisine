@@ -81,7 +81,7 @@ export default function HeroSection() {
         }}
         plugins={[
           Autoplay({
-            delay: 10000,
+            delay: 5000,
           }),
         ]}
       >

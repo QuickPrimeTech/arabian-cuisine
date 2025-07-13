@@ -14,6 +14,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { FaTiktok } from "react-icons/fa6";
 
 interface InstagramPost {
   id: string;
@@ -90,7 +91,7 @@ export default function InstagramFeed() {
       <div className="text-center mb-16">
         <div className="flex items-center justify-center space-x-3 mb-6">
           <Instagram className="h-8 w-8 text-secondary" />
-          <h2 className="header2 font-serif">Follow Our Journey</h2>
+          <h2 className="header2 font-serif">Follow Us on Tiktok</h2>
         </div>
         <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
           Stay connected with Arabian Cuisine on Instagram for behind-the-scenes
@@ -130,7 +131,7 @@ export default function InstagramFeed() {
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                  <Instagram className="h-6 w-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <FaTiktok className="h-6 w-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </Link>
             </CarouselItem>
@@ -148,8 +149,8 @@ export default function InstagramFeed() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Instagram className="h-5 w-5 mr-2" />
-          Follow Us on Instagram
+          <FaTiktok className="h-5 w-5 mr-2" />
+          Follow Us on Tiktok
         </Link>
       </Button>
     </section>
