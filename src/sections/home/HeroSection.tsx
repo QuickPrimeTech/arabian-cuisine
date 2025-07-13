@@ -1,7 +1,9 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import Autoplay from "embla-carousel-autoplay";
 import { ArrowDown, ArrowRight } from "lucide-react";
 import {
   Carousel,
@@ -10,13 +12,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
-// const images = [
-//   "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382745/imgi_13_88749_gnirbv.jpg",
-//   "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382744/imgi_40_88750_dj7anm.jpg",
-//   "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382744/imgi_9_88747_rxznwg.jpg",
-//   "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382747/imgi_10_88733_xnczpl.jpg",
-// ];
 
 const slides = [
   {
@@ -53,7 +48,17 @@ const slides = [
 export default function HeroSection() {
   return (
     <section className="relative h-screen flex items-center  justify-center lg:justify-start overflow-hidden">
-      <Carousel className="w-full">
+      <Carousel
+        className="w-full"
+        opts={{
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 10000,
+          }),
+        ]}
+      >
         <CarouselContent className="h-screen">
           {slides.map((slide, index) => (
             <CarouselItem
@@ -106,8 +111,6 @@ export default function HeroSection() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
       </Carousel>
 
       {/* Fading Background Images */}
