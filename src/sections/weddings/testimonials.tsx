@@ -61,14 +61,13 @@ export function Testimonials() {
                   index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 } gap-8 lg:gap-12 items-center`}
               >
-                <div className="lg:w-1/2">
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <div className="w-full lg:w-1/2">
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video">
                     <Image
                       src={wedding.image || "/placeholder.svg"}
                       alt={`${wedding.couple} wedding`}
-                      width={600}
-                      height={400}
-                      className="w-full h-80 object-cover"
+                      fill
+                      className="object-cover"
                     />
                     <div className="absolute top-4 right-4 bg-yellow-500/20 backdrop-blur-sm rounded-full p-2">
                       <Heart
