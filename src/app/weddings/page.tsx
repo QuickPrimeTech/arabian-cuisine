@@ -1,3 +1,4 @@
+import { AvailabilityBooking } from "@/sections/weddings/availability";
 import { CapacityLayout } from "@/sections/weddings/capacity";
 import { VenueGallery } from "@/sections/weddings/gallery";
 import { Hero } from "@/sections/weddings/hero";
@@ -12,6 +13,7 @@ export default function HeroSection() {
       <CapacityLayout />
       <MenuShowcase />
       <Testimonials />
+      <AvailabilityBooking />
     </>
   );
 }

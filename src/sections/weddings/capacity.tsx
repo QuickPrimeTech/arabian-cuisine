@@ -60,10 +60,10 @@ export function CapacityLayout() {
               </div>
             </CardHeader>
             <CardContent>
-              <h3 className="text-xl font-semibold text-secondary mb-2">
+              <h3 className="text-xl font-semibold text-foreground mb-2">
                 {option.title}
               </h3>
-              <p className="text-2xl font-serif text-foreground mb-4">
+              <p className="text-2xl font-serif text-secondary mb-4">
                 {option.capacity}
               </p>
               <p className="text-muted-foreground leading-relaxed">
