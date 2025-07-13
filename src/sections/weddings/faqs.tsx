@@ -1,15 +1,11 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 
-import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ChevronDown, ChevronUp } from "lucide-react";
 
 const faqs = [
   {
@@ -55,12 +51,6 @@ const faqs = [
 ];
 
 export function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <section className="section">
       <div className="container mx-auto px-4">

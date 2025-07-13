@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 export const contactInfo = [
@@ -70,11 +70,14 @@ export function LocationContact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-ivory-50">
+    <section id="contact" className="section" aria-labelledby="contact-header">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-4">
+            <h2
+              className="text-4xl md:text-5xl font-serif text-foreground mb-4"
+              id="contact-header"
+            >
               Location & Contact
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -178,9 +181,11 @@ export function LocationContact() {
                   className="min-h-32 border-blush-200 focus:border-gold-500"
                 />
 
-                <Button type="submit">Send Message</Button>
+                <Button type="submit">
+                  Send Message
+                  <Send />
+                </Button>
               </form>
-
               <div className="mt-8 pt-6 border-t border-border text-center">
                 <p className="text-muted-foreground mb-4">
                   Prefer to call or text?
