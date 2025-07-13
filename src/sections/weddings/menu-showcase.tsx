@@ -115,7 +115,7 @@ export function MenuShowcase() {
           </div>
 
           {/* Tab Navigation */}
-          <ScrollArea className="w-full overflow-x-auto mb-12 rounded-full">
+          <ScrollArea className="max-sm:w-full overflow-x-auto mb-12 rounded-full">
             <div className="flex space-x-4 px-4 py-2 justify-start md:justify-center max-w-full bg-card">
               {tabs.map((tab) => (
                 <button
