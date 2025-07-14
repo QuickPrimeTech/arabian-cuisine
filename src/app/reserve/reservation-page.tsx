@@ -1,13 +1,12 @@
 "use client";
 
-import type React from "react";
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Header, H1, SubTitle } from "@/components/typography";
+import { toast } from "sonner";
 import {
   Select,
   SelectContent,
@@ -24,36 +23,81 @@ import {
 } from "@/components/ui/card";
 import { Calendar, Clock, Users, Phone, Mail, User } from "lucide-react";
 
+// Strong type for form state
+type ReservationForm = {
+  name: string;
+  email: string;
+  phone: string;
+  date: string;
+  time: string;
+  guests: string;
+  notes: string;
+};
+
 export default function ReservationPage() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ReservationForm>({
     name: "",
     email: "",
     phone: "",
     date: "",
     time: "",
     guests: "",
-    specialRequests: "",
+    notes: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Reservation submitted:", formData);
+
+    try {
+      const response = await fetch("/api/reservations", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        console.error("Error response:", data);
+        toast.error(data.error || "Failed to submit reservation.");
+        return;
+      }
+
+      toast.success("Reservation submitted successfully!");
+
+      // Optionally reset the form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        date: "",
+        time: "",
+        guests: "",
+        notes: "",
+      });
+    } catch (err) {
+      console.error("Unexpected error:", err);
+      toast.error("Unexpected error occurred. Please try again.");
+    }
   };
 
-  const handleInputChange = (field: string, value: string) => {
+  const handleInputChange = (field: keyof ReservationForm, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="h-96 flex justify-center items-center">
+      <div className="h-96 flex justify-center items-center bg-background">
         <Header>
-          <H1 id="menu-header">Make a Reservation</H1>
+          <H1 id="menu-header" className="text-foreground">
+            Make a Reservation
+          </H1>
           <SubTitle>
             Reserve your table for an unforgettable dining experience
           </SubTitle>
         </Header>
       </div>
+
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
@@ -66,6 +110,7 @@ export default function ReservationPage() {
               </CardHeader>
               <CardContent className="p-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Personal Info */}
                   <div className="space-y-4">
                     <h3 className="text-lg font-semibold flex items-center gap-2">
                       <User className="h-5 w-5" />
@@ -113,6 +158,7 @@ export default function ReservationPage() {
                     </div>
                   </div>
 
+                  {/* Reservation Info */}
                   <div className="space-y-4">
                     <h3 className="text-lg font-semibold flex items-center gap-2">
                       <Calendar className="h-5 w-5" />
@@ -132,9 +178,11 @@ export default function ReservationPage() {
                           required
                         />
                       </div>
+
                       <div className="space-y-2">
                         <Label htmlFor="time">Time *</Label>
                         <Select
+                          value={formData.time}
                           onValueChange={(value) =>
                             handleInputChange("time", value)
                           }
@@ -143,21 +191,30 @@ export default function ReservationPage() {
                             <SelectValue placeholder="Select time" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="17:00">5:00 PM</SelectItem>
-                            <SelectItem value="17:30">5:30 PM</SelectItem>
-                            <SelectItem value="18:00">6:00 PM</SelectItem>
-                            <SelectItem value="18:30">6:30 PM</SelectItem>
-                            <SelectItem value="19:00">7:00 PM</SelectItem>
-                            <SelectItem value="19:30">7:30 PM</SelectItem>
-                            <SelectItem value="20:00">8:00 PM</SelectItem>
-                            <SelectItem value="20:30">8:30 PM</SelectItem>
-                            <SelectItem value="21:00">9:00 PM</SelectItem>
+                            {[
+                              "17:00",
+                              "17:30",
+                              "18:00",
+                              "18:30",
+                              "19:00",
+                              "19:30",
+                              "20:00",
+                              "20:30",
+                              "21:00",
+                            ].map((time) => (
+                              <SelectItem key={time} value={time}>
+                                {time.slice(0, 2)}:{time.slice(3)}{" "}
+                                {parseInt(time) < 12 ? "AM" : "PM"}
+                              </SelectItem>
+                            ))}
                           </SelectContent>
                         </Select>
                       </div>
+
                       <div className="space-y-2">
                         <Label htmlFor="guests">Guests *</Label>
                         <Select
+                          value={formData.guests}
                           onValueChange={(value) =>
                             handleInputChange("guests", value)
                           }
@@ -177,13 +234,14 @@ export default function ReservationPage() {
                     </div>
                   </div>
 
+                  {/* Notes */}
                   <div className="space-y-2">
-                    <Label htmlFor="requests">Special Requests</Label>
+                    <Label htmlFor="notes">Special Requests</Label>
                     <Textarea
-                      id="requests"
-                      value={formData.specialRequests}
+                      id="notes"
+                      value={formData.notes}
                       onChange={(e) =>
-                        handleInputChange("specialRequests", e.target.value)
+                        handleInputChange("notes", e.target.value)
                       }
                       placeholder="Any dietary restrictions, special occasions, or other requests..."
                       className="min-h-[100px]"
@@ -200,6 +258,7 @@ export default function ReservationPage() {
               </CardContent>
             </Card>
 
+            {/* Sidebar Info */}
             <div className="space-y-8">
               <Card>
                 <CardHeader>
@@ -270,6 +329,7 @@ export default function ReservationPage() {
         </div>
       </div>
 
+      {/* Footer Callout */}
       <div className="py-8">
         <div className="container mx-auto px-4 text-center">
           <p>

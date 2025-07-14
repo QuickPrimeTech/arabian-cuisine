@@ -16,7 +16,6 @@ export async function GET() {
       "id, name, description, price, category, dietary_preference, image_url,is_available"
     )
     .eq("user_id", clientUserId);
-  console.log("Fetched menu items:", data);
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
