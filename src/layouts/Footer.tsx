@@ -7,7 +7,7 @@ const quickLinks = [
   { name: "Menu", href: "/menu" },
   { name: "About Us", href: "/about" },
   { name: "Gallery", href: "/gallery" },
-  { name: "Private Events", href: "/private-events" },
+  { name: "Weddings", href: "/private-events" },
   { name: "Contact", href: "/contact" },
   { name: "Reservations", href: "/reserve" },
 ];

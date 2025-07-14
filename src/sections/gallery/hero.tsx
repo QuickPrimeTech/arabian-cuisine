@@ -31,5 +31,6 @@ export default function GalleryHeader() {
         </div>
       </div>
     </section>
+
   );
 }
