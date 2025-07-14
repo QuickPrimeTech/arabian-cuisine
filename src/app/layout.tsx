@@ -44,7 +44,7 @@ export default function RootLayout({
         <main className="min-h-screen">{children}</main>
         <Footer />
         <WhatsAppButton />
-        <Toaster />
+        <Toaster richColors position="top-center" />
       </body>
     </html>
   );

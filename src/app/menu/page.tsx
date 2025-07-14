@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import SearchFilterSection from "@/sections/menu/search-filter";
 import CategoryBarSection from "@/sections/menu/category-bar";
