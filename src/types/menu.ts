@@ -6,5 +6,6 @@ export type MenuItem = {
   image: string;
   category: string;
   featured: true;
-  dietary: string[] | [];
+  dietary?: string[] | [];
+  tags: string[];
 };
