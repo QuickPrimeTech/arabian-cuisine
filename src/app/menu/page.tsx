@@ -46,9 +46,9 @@ export default function MenuPage() {
     <>
       <section
         aria-labelledby="menu-header"
-        className="pb-12 md:pb-16 relative top-17 space-y-12"
+        className="pb-12 md:pb-16 relative top-17"
       >
-        <div className="sticky top-17 z-10 bg-background/90 py-4 border-b  section-x">
+        <div className="sticky top-17 z-10 bg-background/90 py-4 border-b section-x">
           <SearchFilterSection
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
@@ -65,12 +65,10 @@ export default function MenuPage() {
           />
         </div>
 
-        <div className="section-x">
-          <MenuGridSection
-            filteredItems={filteredItems}
-            clearAllFilters={clearAllFilters}
-          />
-        </div>
+        <MenuGridSection
+          filteredItems={filteredItems}
+          clearAllFilters={clearAllFilters}
+        />
       </section>
     </>
   );

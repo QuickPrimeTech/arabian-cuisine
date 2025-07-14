@@ -1,4 +1,5 @@
 import { placeholderImg } from "@/sections/about/hero";
+import { MenuItem } from "@/types/menu";
 
 export const menuCategories = ["All", "starter", "main", "dessert", "beverage"];
 
@@ -11,17 +12,17 @@ export const menuFilters = [
   "popular",
 ];
 
-export const menuItems = [
+export const menuItems: MenuItem[] = [
   {
     id: 1,
     name: "Truffle Risotto",
     description:
       "Creamy Arborio rice with wild mushrooms, finished with truffle oil and Parmesan",
     price: 24,
-    image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1749756966/IMG_9660-2-scaled_yy7iit.jpg",
+    image: placeholderImg,
     category: "Main Courses",
-    tags: ["Vegetarian", "Chef's Special"],
+    featured: true,
+    dietary: ["Vegetarian", "Chef's Special"],
   },
   {
     id: 2,
@@ -29,10 +30,10 @@ export const menuItems = [
     description:
       "Pan-seared scallops with cauliflower purée, crispy pancetta, and herb oil",
     price: 32,
-    image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1749757399/1673539598595_v6dd24.webp",
+    image: placeholderImg,
     category: "Seafood",
-    tags: ["Chef's Special", "Seasonal"],
+    featured: true,
+    dietary: ["Chef's Special", "Seasonal"],
   },
   {
     id: 3,
@@ -40,10 +41,10 @@ export const menuItems = [
     description:
       "Tender beef fillet wrapped in mushroom duxelles and puff pastry, served with red wine jus",
     price: 42,
-    image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1749757499/perfect-beef-wellington-105140-1_mx538s.webp",
+    image: placeholderImg,
     category: "Main Courses",
-    tags: ["Chef's Special"],
+    featured: true,
+    dietary: ["Chef's Special"],
   },
   {
     id: 4,
@@ -51,30 +52,30 @@ export const menuItems = [
     description:
       "Creamy burrata with heirloom tomatoes, basil, and aged balsamic",
     price: 18,
-    image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1749822054/peach-burrata-salad-f_i-2_lqnkkz.jpg",
+    image: placeholderImg,
     category: "Starters",
-    tags: ["Vegetarian", "Seasonal"],
+    featured: true,
+    dietary: ["Vegetarian", "Seasonal"],
   },
   {
     id: 5,
     name: "Chocolate Soufflé",
     description: "Warm chocolate soufflé with vanilla bean ice cream",
     price: 14,
-    image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1749822158/1484024436574_wunubv.webp",
+    image: placeholderImg,
     category: "Desserts",
-    tags: ["Vegetarian"],
+    featured: true,
+    dietary: ["Vegetarian"],
   },
   {
     id: 6,
     name: "Lobster Bisque",
     description: "Rich and creamy lobster soup with a touch of brandy",
     price: 22,
-    image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1749822228/Depositphotos_65928549_L-1_w7q61q.jpg",
+    image: placeholderImg,
     category: "Starters",
-    tags: ["Chef's Special"],
+    featured: true,
+    dietary: ["Chef's Special"],
   },
 ];
 
