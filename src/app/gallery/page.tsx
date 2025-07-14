@@ -1,10 +1,7 @@
-"use client";
-
-import { useState } from "react";
-import GalleryHeroSection from "@/sections/gallery/hero";
+import { GalleryFiltersPage } from "@/sections/gallery/gallery-filters";
+import GalleryHeader from "@/sections/gallery/hero";
 import ImageGridSection from "@/sections/gallery/image-grid";
-import GalleryCTASection from "@/sections/gallery/cta";
-
+        
 export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("All");
 
