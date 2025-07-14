@@ -1,12 +1,31 @@
-export type TextLine = { type: "text"; value: string };
-export type LabelLine = { type: "label"; value: string };
-export type LinkLine = { type: "link"; value: string; href: string };
-export type HoursLine = { type: "hours"; day: string; time: string };
+import { LucideIcon } from "lucide-react";
 
-export type ContactLine = TextLine | LabelLine | LinkLine | HoursLine;
+type TextLine = {
+  type: "text" | "label";
+  value: string;
+};
+
+type LinkLine = {
+  type: "link";
+  value: string;
+  href: string;
+};
+
+type HoursLine = {
+  type: "hours";
+  day: string;
+  time: string;
+};
+
+type Line = TextLine | LinkLine | HoursLine;
 
 export type ContactItem = {
-  icon: React.ElementType;
+  icon: LucideIcon;
   title: string;
-  lines: ContactLine[];
+  lines: Line[];
 };
+
+// Example usage:
+const contactItems: ContactItem[] = [
+  /* ... */
+];

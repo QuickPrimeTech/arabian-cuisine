@@ -28,7 +28,10 @@ const Title = ({ children, className, ...props }: WithChildrenAndClass) => {
 const H1 = ({ children, className, ...props }: WithChildrenAndClass) => {
   return (
     <h1
-      className={cn("font-bold text-3xl md:text-4xl lg:text-6xl", className)}
+      className={cn(
+        "font-serif text-5xl md:text-6xl font-bold mb-6",
+        className
+      )}
       {...props}
     >
       {children}
@@ -38,7 +41,7 @@ const H1 = ({ children, className, ...props }: WithChildrenAndClass) => {
 
 const SubTitle = ({ children, className }: WithChildrenAndClass) => {
   return (
-    <h3 className={cn("text-muted-foreground max-w-3xl mx-auto", className)}>
+    <h3 className={cn("text-xl max-w-3xl mx-auto leading-relaxed", className)}>
       {children}
     </h3>
   );

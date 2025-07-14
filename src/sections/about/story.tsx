@@ -8,6 +8,7 @@ import {
   AboutCardTitle,
   AboutCardDescription,
 } from "@/components/about-card";
+import { placeholderImg } from "./hero";
 
 export const aboutCardsData = [
   {
@@ -15,7 +16,7 @@ export const aboutCardsData = [
     description:
       "From the first bite to the last sip, Savoria offers an immersive culinary journey curated by passionate chefs and sommeliers. Our seasonal menus celebrate the finest local ingredients with elegant presentation.",
     image: {
-      src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749844677/10_u5imnk.jpg",
+      src: placeholderImg,
       alt: "Beautifully plated fine dining dish",
     },
     cta: {
@@ -28,7 +29,7 @@ export const aboutCardsData = [
     description:
       "From the first bite to the last sip, Savoria offers an immersive culinary journey curated by passionate chefs and sommeliers. Our seasonal menus celebrate the finest local ingredients with elegant presentation.",
     image: {
-      src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749844785/restaurant_diners_tablet_cs_shutterstock_684417850_lgngl0.jpg",
+      src: placeholderImg,
       alt: "Beautifully plated fine dining dish",
     },
   },
@@ -37,7 +38,7 @@ export const aboutCardsData = [
     description:
       "Founded in 2010 by Chef Marco Rossi, Savoria began as a small family restaurant with a vision to create an exceptional dining experience that celebrates the art of fine cuisine.",
     image: {
-      src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749844860/PAB8263-HDR-scaled_dkwpxs.jpg",
+      src: placeholderImg,
       alt: "Elegant restaurant interior with ambient lighting",
     },
     cta: {
@@ -50,7 +51,7 @@ export const aboutCardsData = [
     description:
       "Our team is dedicated to making every guest feel like family. Expect genuine smiles, attentive service, and an atmosphere where memories are made—because you deserve more than just a meal.",
     image: {
-      src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749844928/morten-and-cristine-at-kod_rbnyf5.jpg",
+      src: placeholderImg,
       alt: "Restaurant staff warmly greeting guests",
     },
     cta: {

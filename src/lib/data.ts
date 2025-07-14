@@ -1,3 +1,5 @@
+import { placeholderImg } from "@/sections/about/hero";
+
 export const menuCategories = ["All", "starter", "main", "dessert", "beverage"];
 
 export const menuFilters = [
@@ -148,49 +150,49 @@ export const teamMembers = [
 export const galleryImages = [
   {
     id: 1,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749847942/crumble-2024x1518_yxs0ca.jpg",
+    src: placeholderImg,
     alt: "Signature dish plating",
     category: "Food",
   },
   {
     id: 2,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749830847/1080_stwdxw.jpg",
+    src: placeholderImg,
     alt: "Restaurant interior with ambient lighting",
     category: "Interior",
   },
   {
     id: 3,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749806337/blini-with-cream-cheese-and-smoked-salmon-515810_vaetha.jpg",
+    src: placeholderImg,
     alt: "Chef preparing a dish in the kitchen",
     category: "Food",
   },
   {
     id: 4,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749831004/Fully-Automatic-Terrace-Roof-Retractable-Sliding-and-Folding-Luxury-Outdoor-Patio-Pergola-Water-Proof_srjll1.jpg",
+    src: placeholderImg,
     alt: "Outdoor dining area",
     category: "Exterior",
   },
   {
     id: 5,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749830743/RotterdamRendering_DiningRoom_1_HAL6278_mx63yp.jpg",
+    src: placeholderImg,
     alt: "Private dining room setup",
     category: "Private Dining",
   },
   {
     id: 6,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749798320/114f3948_sazyjm.jpg",
+    src: placeholderImg,
     alt: "Wedding reception at the restaurant",
     category: "Events",
   },
   {
     id: 7,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749806475/chicken-shashlik-dry-recipe-card_hmatjy.jpg",
+    src: placeholderImg,
     alt: "Dessert platter presentation",
     category: "Food",
   },
   {
     id: 8,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749844860/PAB8263-HDR-scaled_dkwpxs.jpg",
+    src: placeholderImg,
     alt: "Bar area with craft cocktails",
     category: "Interior",
   },
