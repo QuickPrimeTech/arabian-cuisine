@@ -1,7 +1,10 @@
 export interface MenuItem {
   id: number;
   name: string;
+  image: string;
+  featured: boolean;
   description: string;
+  dietary: string[];
   price: number;
   category: string;
   dietary_preference: string[] | string; // Accepts both
