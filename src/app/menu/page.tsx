@@ -1,13 +1,9 @@
 "use client";
-
 import { useState } from "react";
 import SearchFilterSection from "@/sections/menu/search-filter";
 import CategoryBarSection from "@/sections/menu/category-bar";
-import ActiveFiltersSection from "@/sections/menu/active-filters";
 import MenuGridSection from "@/sections/menu/menu-grid";
 import { menuItems } from "@/lib/data";
-import { Header, H1, SubTitle } from "@/components/typography";
-import { MenuItem } from "@/types/menu";
 
 export default function MenuPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -50,7 +46,7 @@ export default function MenuPage() {
     <>
       <section
         aria-labelledby="menu-header"
-        className="pb-12 md:pb-16 space-y-12"
+        className="pb-12 md:pb-16 relative top-17 space-y-12"
       >
         <div className="sticky top-17 z-10 bg-background/90 py-4 border-b  section-x">
           <SearchFilterSection
@@ -70,12 +66,6 @@ export default function MenuPage() {
         </div>
 
         <div className="section-x">
-          <ActiveFiltersSection
-            activeFilters={activeFilters}
-            toggleFilter={toggleFilter}
-            clearAllFilters={clearAllFilters}
-          />
-
           <MenuGridSection
             filteredItems={filteredItems}
             clearAllFilters={clearAllFilters}
