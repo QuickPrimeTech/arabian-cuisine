@@ -1,4 +1,3 @@
-import { placeholderImg } from "@/sections/about/hero";
 import { MenuItem } from "@/types/menu";
 
 export const menuCategories = ["All", "starter", "main", "dessert", "beverage"];
@@ -207,6 +206,121 @@ export const menuItems: MenuItem[] = [
   },
 ];
 
+export const weddingGallery = [
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594493/weddingGallery7_ni7ya7.jpg",
+    caption: "Garden Ceremony",
+    description: "Intimate outdoor ceremonies surrounded by blooming flowers",
+  },
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594490/weddingGallery1_lqucmj.jpg",
+    caption: "Garden Ceremony",
+    description: "Intimate outdoor ceremonies surrounded by blooming flowers",
+  },
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594491/weddingGallery4_ak2pdo.jpg",
+    caption: "Garden Ceremony",
+    description: "Intimate outdoor ceremonies surrounded by blooming flowers",
+  },
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594489/weddingGallery3_dpoc5v.jpg",
+    caption: "Garden Ceremony",
+    description: "Intimate outdoor ceremonies surrounded by blooming flowers",
+  },
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594489/weddingGallery2_lnzqvf.jpg",
+    caption: "Garden Ceremony",
+    description: "Intimate outdoor ceremonies surrounded by blooming flowers",
+  },
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594487/weddingGallery5_ubi013.jpg",
+    caption: "Candlelit Dinner",
+    description: "Romantic evening receptions with ambient lighting",
+  },
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594486/weddingGallery6_w4ntml.jpg",
+    caption: "Elegant Interior",
+    description: "Sophisticated indoor spaces with panoramic views",
+  },
+];
+
+export const galleryImages = [
+  // Food images from menuItems
+  ...menuItems.map((item, index) => ({
+    id: index + 1,
+    src: item.image,
+    alt: item.name,
+    category: "Food",
+  })),
+
+  // Wedding images
+  ...weddingGallery.map((item, index) => ({
+    id: menuItems.length + index + 1,
+    src: item.src,
+    alt: item.caption,
+    category: "Wedding",
+  })),
+];
+
+export const faqItems = [
+  {
+    question: "Do you accommodate dietary restrictions?",
+    answer:
+      "Yes, we are happy to accommodate dietary restrictions and allergies. Please inform us when making your reservation, and our chefs will prepare suitable alternatives.",
+  },
+  {
+    question: "Is there a dress code?",
+    answer:
+      "We suggest smart casual attire. While we don't enforce a strict dress code, we recommend avoiding athletic wear, shorts, and flip-flops.",
+  },
+  {
+    question: "How far in advance should I make a reservation?",
+    answer:
+      "For weekends and special occasions, we recommend booking 2-3 weeks in advance. For weekday dining, 3-5 days notice is usually sufficient.",
+  },
+  {
+    question: "Do you have a private dining room for events?",
+    answer:
+      "Yes, we offer a private dining room that can accommodate up to 20 guests. For larger events, we can arrange partial or full restaurant buyouts.",
+  },
+  {
+    question: "Is there parking available?",
+    answer:
+      "We offer valet parking service for $15. There is also a public parking garage one block away.",
+  },
+];
+
+export const teamMembers = [
+  {
+    id: 1,
+    name: "Chef Marco Rossi",
+    role: "Executive Chef",
+    bio: "With over 20 years of experience in Michelin-starred restaurants across Europe, Chef Marco brings his passion for innovative cuisine to Savoria.",
+    image: "/placeholder.svg?height=400&width=300",
+  },
+  {
+    id: 2,
+    name: "Olivia Bennett",
+    role: "Pastry Chef",
+    bio: "Trained in Paris, Olivia creates desserts that are both visually stunning and extraordinarily delicious, adding the perfect finale to every meal.",
+    image: "/placeholder.svg?height=400&width=300",
+  },
+  {
+    id: 3,
+    name: "Daniel Kim",
+    role: "Sommelier",
+    bio: "With an exceptional palate and knowledge of wines from around the world, Daniel ensures the perfect pairing for your dining experience.",
+    image: "/placeholder.svg?height=400&width=300",
+  },
+  {
+    id: 4,
+    name: "Isabella Martinez",
+    role: "Restaurant Manager",
+    bio: "Isabella's attention to detail and commitment to excellence ensures that every aspect of your visit exceeds expectations.",
+    image: "/placeholder.svg?height=400&width=300",
+  },
+];
+
 export const testimonials = [
   {
     id: 1,
@@ -242,115 +356,5 @@ export const testimonials = [
     content:
       "Their wine pairing suggestions are exceptional. The sommelier truly understands how to enhance each dish with the perfect complement.",
     avatar: "/placeholder.svg?height=80&width=80",
-  },
-];
-
-export const teamMembers = [
-  {
-    id: 1,
-    name: "Chef Marco Rossi",
-    role: "Executive Chef",
-    bio: "With over 20 years of experience in Michelin-starred restaurants across Europe, Chef Marco brings his passion for innovative cuisine to Savoria.",
-    image: "/placeholder.svg?height=400&width=300",
-  },
-  {
-    id: 2,
-    name: "Olivia Bennett",
-    role: "Pastry Chef",
-    bio: "Trained in Paris, Olivia creates desserts that are both visually stunning and extraordinarily delicious, adding the perfect finale to every meal.",
-    image: "/placeholder.svg?height=400&width=300",
-  },
-  {
-    id: 3,
-    name: "Daniel Kim",
-    role: "Sommelier",
-    bio: "With an exceptional palate and knowledge of wines from around the world, Daniel ensures the perfect pairing for your dining experience.",
-    image: "/placeholder.svg?height=400&width=300",
-  },
-  {
-    id: 4,
-    name: "Isabella Martinez",
-    role: "Restaurant Manager",
-    bio: "Isabella's attention to detail and commitment to excellence ensures that every aspect of your visit exceeds expectations.",
-    image: "/placeholder.svg?height=400&width=300",
-  },
-];
-
-export const galleryImages = [
-  {
-    id: 1,
-    src: placeholderImg,
-    alt: "Signature dish plating",
-    category: "Food",
-  },
-  {
-    id: 2,
-    src: placeholderImg,
-    alt: "Restaurant interior with ambient lighting",
-    category: "Interior",
-  },
-  {
-    id: 3,
-    src: placeholderImg,
-    alt: "Chef preparing a dish in the kitchen",
-    category: "Food",
-  },
-  {
-    id: 4,
-    src: placeholderImg,
-    alt: "Outdoor dining area",
-    category: "Exterior",
-  },
-  {
-    id: 5,
-    src: placeholderImg,
-    alt: "Private dining room setup",
-    category: "Private Dining",
-  },
-  {
-    id: 6,
-    src: placeholderImg,
-    alt: "Wedding reception at the restaurant",
-    category: "Events",
-  },
-  {
-    id: 7,
-    src: placeholderImg,
-    alt: "Dessert platter presentation",
-    category: "Food",
-  },
-  {
-    id: 8,
-    src: placeholderImg,
-    alt: "Bar area with craft cocktails",
-    category: "Interior",
-  },
-];
-
-export const faqItems = [
-  {
-    question: "Do you accommodate dietary restrictions?",
-    answer:
-      "Yes, we are happy to accommodate dietary restrictions and allergies. Please inform us when making your reservation, and our chefs will prepare suitable alternatives.",
-  },
-  {
-    question: "Is there a dress code?",
-    answer:
-      "We suggest smart casual attire. While we don't enforce a strict dress code, we recommend avoiding athletic wear, shorts, and flip-flops.",
-  },
-  {
-    question: "How far in advance should I make a reservation?",
-    answer:
-      "For weekends and special occasions, we recommend booking 2-3 weeks in advance. For weekday dining, 3-5 days notice is usually sufficient.",
-  },
-  {
-    question: "Do you have a private dining room for events?",
-    answer:
-      "Yes, we offer a private dining room that can accommodate up to 20 guests. For larger events, we can arrange partial or full restaurant buyouts.",
-  },
-  {
-    question: "Is there parking available?",
-    answer:
-      "We offer valet parking service for $15. There is also a public parking garage one block away.",
   },
 ];

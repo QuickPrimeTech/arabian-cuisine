@@ -29,7 +29,7 @@ export const contactInfo = [
   {
     title: "Email",
     icon: Mail,
-    content: "weddings@bellavista.com",
+    content: "weddings@arabian-cuisine.com",
   },
   {
     title: "Hours",

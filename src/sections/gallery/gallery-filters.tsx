@@ -5,65 +5,8 @@ import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
-const placeholderImg =
-  "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382744/imgi_40_88750_dj7anm.jpg";
-
-const images = [
-  {
-    id: 1,
-    category: "food",
-    src: placeholderImg,
-    title: "Grilled Pacific Salmon",
-  },
-  {
-    id: 2,
-    category: "interior",
-    src: placeholderImg,
-    title: "Main Dining Room",
-  },
-  {
-    id: 3,
-    category: "views",
-    src: placeholderImg,
-    title: "Sunset Ocean View",
-  },
-  {
-    id: 4,
-    category: "events",
-    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1751385759/rozinarestaurantowner_prismn.jpg",
-    title: "Wedding Reception",
-  },
-  {
-    id: 5,
-    category: "food",
-    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1751385759/rozinarestaurantowner_prismn.jpg",
-    title: "Lobster Thermidor",
-  },
-  {
-    id: 6,
-    category: "interior",
-    src: placeholderImg,
-    title: "Private Dining Room",
-  },
-  {
-    id: 7,
-    category: "views",
-    src: placeholderImg,
-    title: "Beachside Terrace",
-  },
-  {
-    id: 8,
-    category: "events",
-    src: placeholderImg,
-    title: "Corporate Event",
-  },
-  {
-    id: 9,
-    category: "food",
-    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1751385759/rozinarestaurantowner_prismn.jpg",
-    title: "Seafood Paella",
-  },
-];
+import { galleryImages } from "@/lib/data";
+import { EmptyState } from "@/components/empty-state";
 
 type GalleryFiltersProps = {
   activeFilter: string;
@@ -76,10 +19,8 @@ function GalleryFilters({
 }: GalleryFiltersProps) {
   const filters = [
     { id: "all", name: "All Photos" },
-    { id: "food", name: "Food" },
-    { id: "interior", name: "Interior" },
-    { id: "events", name: "Events" },
-    { id: "views", name: "Ocean Views" },
+    { id: "Food", name: "Food" },
+    { id: "Wedding", name: "Wedding" },
   ];
 
   return (
@@ -108,13 +49,14 @@ function GalleryFilters({
 type GalleryGridProps = {
   filteredImages: {
     id: number;
+    alt: string;
     category: string;
     src: string;
-    title: string;
   }[];
+  onReset: () => void;
 };
 
-function GalleryGrid({ filteredImages }: GalleryGridProps) {
+function GalleryGrid({ filteredImages, onReset }: GalleryGridProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -134,29 +76,38 @@ function GalleryGrid({ filteredImages }: GalleryGridProps) {
   return (
     <>
       <section className="section">
-        <div className="container mx-auto ">
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
-            {filteredImages.map((image, index) => (
-              <div
-                key={image.id}
-                className="break-inside-avoid group relative overflow-hidden rounded-xl cursor-pointer"
-                onClick={() => openLightbox(index)}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.title}
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105 rounded-xl"
-                />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <h3 className="text-white font-semibold text-lg">
-                    {image.title}
-                  </h3>
+        <div className="container mx-auto">
+          {filteredImages.length === 0 ? (
+            <EmptyState
+              onReset={() => {
+                // Optionally reset filters here, or leave it out
+                onReset();
+              }}
+            />
+          ) : (
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+              {filteredImages.map((image, index) => (
+                <div
+                  key={image.id}
+                  className="break-inside-avoid group relative overflow-hidden rounded-xl cursor-pointer"
+                  onClick={() => openLightbox(index)}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={600}
+                    height={400}
+                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105 rounded-xl"
+                  />
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <h3 className="text-white font-semibold text-lg">
+                      {image.alt}
+                    </h3>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -183,13 +134,13 @@ function GalleryGrid({ filteredImages }: GalleryGridProps) {
           <div className="max-w-4xl max-h-[80vh] mx-4">
             <Image
               src={filteredImages[currentImage].src}
-              alt={filteredImages[currentImage].title}
+              alt={filteredImages[currentImage].alt}
               width={800}
               height={600}
               className="max-w-full max-h-full object-contain"
             />
             <p className="text-white text-center mt-4 text-lg">
-              {filteredImages[currentImage].title}
+              {filteredImages[currentImage].alt}
             </p>
           </div>
         </div>
@@ -203,8 +154,11 @@ export function GalleryFiltersPage() {
 
   const filteredImages =
     activeFilter === "all"
-      ? images
-      : images.filter((img) => img.category === activeFilter);
+      ? galleryImages
+      : galleryImages.filter((img) => img.category === activeFilter);
+  const resetFilters = () => {
+    setActiveFilter("all");
+  };
 
   return (
     <>
@@ -212,7 +166,7 @@ export function GalleryFiltersPage() {
         activeFilter={activeFilter}
         setActiveFilter={setActiveFilter}
       />
-      <GalleryGrid filteredImages={filteredImages} />
+      <GalleryGrid filteredImages={filteredImages} onReset={resetFilters} />
     </>
   );
 }

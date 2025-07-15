@@ -60,8 +60,8 @@ export function FAQ() {
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Everything you need to know about planning your wedding at Bella
-              Vista
+              Everything you need to know about planning your wedding at Arabian
+              Cusine
             </p>
           </div>
 
