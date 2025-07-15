@@ -17,6 +17,7 @@ interface TiktokPost {
   mediaUrl: string;
   caption?: string;
 }
+
 const link = "https://www.tiktok.com/@thearabiancuisine";
 
 const mockPosts: TiktokPost[] = [
@@ -29,31 +30,31 @@ const mockPosts: TiktokPost[] = [
   {
     id: "2",
     mediaUrl:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382757/imgi_64_88755_bmmbg2.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752585565/tiktok3_qjvgvc.png",
     caption: "Elegant dining room",
   },
   {
     id: "3",
     mediaUrl:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382748/imgi_49_88737_sbmdc4.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752585592/tiktok4_f96ics.png",
     caption: "Chef's special",
   },
   {
     id: "4",
     mediaUrl:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382752/imgi_54_88848_fjxtjm.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752585563/titktok2_sahq2j.png",
     caption: "Wine selection",
   },
   {
     id: "5",
     mediaUrl:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382745/imgi_65_88756_asiqmf.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752585833/tiktok.5_jmcrrd.png",
     caption: "Dessert presentation",
   },
   {
     id: "6",
     mediaUrl:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382753/imgi_59_88746_nhq00n.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752586082/tiktok6_d9xgal.png",
     caption: "Private dining",
   },
   {
