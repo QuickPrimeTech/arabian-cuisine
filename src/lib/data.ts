@@ -15,23 +15,24 @@ export const menuFilters = [
 export const menuItems: MenuItem[] = [
   {
     id: 1,
-    name: "Truffle Risotto",
+    name: "Chicken Biriani",
     description:
-      "Creamy Arborio rice with wild mushrooms, finished with truffle oil and Parmesan",
-    price: 24,
-    image: placeholderImg,
+      "Fragrant basmati rice layered with spiced chicken, herbs, and caramelized onions, slow-cooked to rich, flavorful perfection.",
+    price: 700,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752586946/Chicken_Biryani_eqb3jk.jpg",
     category: "Main Courses",
     featured: true,
     dietary: ["Vegetarian", "Chef's Special"],
   },
   {
     id: 2,
-    name: "Seared Scallops",
+    name: " Dates with Black Tea",
     description:
       "Pan-seared scallops with cauliflower purée, crispy pancetta, and herb oil",
     price: 32,
     image: placeholderImg,
-    category: "Seafood",
+    category: "Beverages",
     featured: true,
     dietary: ["Chef's Special", "Seasonal"],
   },

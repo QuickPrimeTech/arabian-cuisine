@@ -4,9 +4,9 @@ import { Camera } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const images = [
-  "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382750/imgi_52_88740_ww0j0r.jpg", // Big left image
-  "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382748/imgi_49_88737_sbmdc4.jpg", // Top right
-  "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382745/imgi_65_88756_asiqmf.jpg", // Bottom right
+  "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752584650/imgi_27_AC9h4npAuT1VtCfpP372ogkKDHkxEaOU7_vxxV6IN5gZjSofCJslZReUsklTqtKTaQoiHffrozfXH8h-YZ-Jh8HJCyHd2UIdJdryY5NqJwJJkdqVVzutpVGwEyRQlTyF8Xb_3xgpmAm8H0dGy-Aj_s676-k-no_pcdelm.jpg", // Big left image
+  "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752584725/imgi_91_AF1QipPzyUEUk4kqLfuHs3dPDzgGElYir1ekvSRi7Gmf_s762-k-no_jiehvy.jpg", // Top right
+  "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752584756/imgi_50_AF1QipNPeEEIMtGfWFQnkE2vxikwHFGB-FCmFyGTYz4C_s967-k-no_fnpq6f.jpg", // Bottom right
 ];
 
 export default function Gallery() {
