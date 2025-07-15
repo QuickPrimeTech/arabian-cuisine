@@ -23,47 +23,49 @@ interface InstagramPost {
   caption?: string;
 }
 
+const link = "https://www.tiktok.com/@thearabiancuisine";
+
 const mockPosts: InstagramPost[] = [
   {
     id: "1",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382750/imgi_52_88740_ww0j0r.jpg",
-    permalink: "https://www.instagram.com/thearabiancuisine_upperhill/?hl=en",
+    permalink: link,
     caption: "Fresh truffle risotto",
   },
   {
     id: "2",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382757/imgi_64_88755_bmmbg2.jpg",
-    permalink: "https://www.instagram.com/thearabiancuisine_upperhill/?hl=en",
+    permalink: link,
     caption: "Elegant dining room",
   },
   {
     id: "3",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382748/imgi_49_88737_sbmdc4.jpg",
-    permalink: "https://www.instagram.com/thearabiancuisine_upperhill/?hl=en",
+    permalink: link,
     caption: "Chef's special",
   },
   {
     id: "4",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382752/imgi_54_88848_fjxtjm.jpg",
-    permalink: "https://www.instagram.com/thearabiancuisine_upperhill/?hl=en",
+    permalink: link,
     caption: "Wine selection",
   },
   {
     id: "5",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382745/imgi_65_88756_asiqmf.jpg",
-    permalink: "https://www.instagram.com/thearabiancuisine_upperhill/?hl=en",
+    permalink: link,
     caption: "Dessert presentation",
   },
   {
     id: "6",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382753/imgi_59_88746_nhq00n.jpg",
-    permalink: "https://www.instagram.com/thearabiancuisine_upperhill/?hl=en",
+    permalink: link,
     caption: "Private dining",
   },
 ];
@@ -98,11 +100,7 @@ export default function InstagramFeed() {
           moments, seasonal specials, and culinary inspiration.
         </p>
         <Button asChild>
-          <Link
-            href="https://www.instagram.com/thearabiancuisine_upperhill/?hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href={link} target="_blank" rel="noopener noreferrer">
             <span>@ariabiancuisine</span>
             <ExternalLink className="h-4 w-4" />
           </Link>
@@ -144,11 +142,7 @@ export default function InstagramFeed() {
 
       {/* CTA Button */}
       <Button asChild>
-        <Link
-          href="https://www.instagram.com/thearabiancuisine_upperhill/?hl=en"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href={link} target="_blank" rel="noopener noreferrer">
           <FaTiktok className="h-5 w-5 mr-2" />
           Follow Us on Tiktok
         </Link>
