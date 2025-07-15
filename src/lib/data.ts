@@ -27,56 +27,183 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: 2,
-    name: " Dates with Black Tea",
+    name: "Dates with Black Tea",
     description:
-      "Pan-seared scallops with cauliflower purée, crispy pancetta, and herb oil",
-    price: 32,
-    image: placeholderImg,
+      "Sweet dates served alongside a glass of hot black tea, a traditional and energizing snack popular in Swahili and Islamic cultures.",
+    price: 150,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752595385/imgi_3_19051999_222637358247615_4317120346470744064_n_xwh1yx.jpg",
     category: "Beverages",
     featured: true,
-    dietary: ["Chef's Special", "Seasonal"],
+    dietary: ["Vegan", "Gluten-Free"],
   },
   {
     id: 3,
-    name: "Beef Wellington",
+    name: "Grilled Chicken with Fried Potatoes",
     description:
-      "Tender beef fillet wrapped in mushroom duxelles and puff pastry, served with red wine jus",
-    price: 42,
-    image: placeholderImg,
+      "Juicy, spice-marinated grilled chicken served with crispy fried potato slices, fresh onions, and a savory dipping sauce.",
+    price: 450,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752589022/imgi_37_AC9h4nrSmiXhG0Qy0K7KKPRgg_ujWu1FHUWeQ9QUwc7_oLWdU6pq5vMZ39PiRF-ThawcmeluCfz3UXSxPCK0Mrj2OX0DsYxsWcjGDdJzBEos4YaSGz81tSGKKV9CiSEGK84qGi9pE92g_s580-k-no_iojtrf.jpg",
     category: "Main Courses",
     featured: true,
-    dietary: ["Chef's Special"],
+    dietary: ["Spicy"],
   },
   {
     id: 4,
-    name: "Burrata Salad",
+    name: "Power Protein Salad",
     description:
-      "Creamy burrata with heirloom tomatoes, basil, and aged balsamic",
-    price: 18,
-    image: placeholderImg,
-    category: "Starters",
+      "A nutritious salad loaded with fresh spinach, boiled eggs, avocado slices, tuna flakes, carrots, tomatoes, and assorted nuts. Perfect for a healthy and energizing meal.",
+    price: 400,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752595174/imgi_14_18579632_1498366690184483_3373633026448687104_n_rwd7dj.jpg",
+    category: "Salads",
     featured: true,
-    dietary: ["Vegetarian", "Seasonal"],
+    dietary: ["Gluten-Free"],
   },
   {
     id: 5,
-    name: "Chocolate Soufflé",
-    description: "Warm chocolate soufflé with vanilla bean ice cream",
-    price: 14,
-    image: placeholderImg,
+    name: "Chocolate Oreo Milkshake",
+    description:
+      "A rich and creamy chocolate milkshake blended with crushed Oreo cookies, topped with a generous layer of cookie crumble and served chilled with a straw.",
+    price: 300,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752590400/imgi_48_AF1QipMY_5bFcHtjmEG6Nufzggbs-fT3Zh3QpH-AfRzo_s609-k-no_ibcv1p.jpg",
+    category: "Beverages",
+    featured: true,
+    dietary: ["Vegetarian", "Sweet Treat"],
+  },
+  {
+    id: 6,
+    name: "Nyama Choma with Rice",
+    description:
+      "Tender roasted goat meat served with fluffy white rice, a side of fresh tomato salsa, and grilled vegetable garnish. A beloved staple of Kenyan cuisine.",
+    price: 550,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752595081/imgi_10_18580575_414793855573391_7777672047722758144_n_kop9hs.jpg",
+    category: "Main Courses",
+    featured: true,
+    dietary: ["High Protein", "Kenyan Classic"],
+  },
+  {
+    id: 7,
+    name: "Mango Delight",
+    description:
+      "A smooth and creamy mango dessert served chilled in elegant glasses. Made from ripe mangoes, blended with yogurt or cream for a refreshing tropical treat.",
+    price: 250,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599221/juice_clgy4p.jpg",
+    category: "Desserts & Beverages",
+    featured: true,
+    dietary: ["Vegetarian", "Gluten-Free"],
+  },
+  {
+    id: 8,
+    name: "Tropical Grilled Chicken Salad",
+    description:
+      "A colorful, nutrient-packed salad with juicy grilled chicken, charred pineapple slices, fresh avocado, cherry tomatoes, cucumber, red onions, and leafy greens, topped with sesame seeds.",
+    price: 550,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599230/salad_cllrlo.jpg",
+    category: "Salads",
+    featured: true,
+    dietary: ["High Protein", "Gluten-Free", "Tropical"],
+  },
+  {
+    id: 10,
+    name: "Chicken Mandi Platter",
+    description:
+      "A large communal platter featuring aromatic spiced rice, tender roasted chicken pieces, and flavorful broth served in individual bowls. A traditional Middle Eastern-inspired dish popular at gatherings.",
+    price: 1200,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752598903/imgi_20_18512627_1340716886012730_3091618838068854784_n_zrs6kt.jpg",
+    category: "Main Courses",
+    featured: true,
+    dietary: ["Spiced", "Group Meal", "Halal Friendly"],
+  },
+  {
+    id: 11,
+    name: "Assorted Gourmet Ice Cream",
+    description:
+      "A vibrant selection of creamy ice cream scoops in various flavors including chocolate, vanilla, strawberry, and nut-filled varieties. Garnished with chocolate shavings, orange zest, and berries for a perfect sweet treat.",
+    price: 350,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599228/icecream_pbb4fr.jpg",
+    category: "Desserts",
+    featured: true,
+    dietary: ["Vegetarian", "Sweet Treat", "Chilled Dessert"],
+  },
+  {
+    id: 12,
+    name: "Chicken Pilau Platter with Grilled Potatoes",
+    description:
+      "A generous platter of aromatic chicken pilau served with seasoned grilled potatoes and a fresh side salad of onions, lettuce, and tomato dressing. Perfect for sharing or a hearty solo meal.",
+    price: 700,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599230/ricepotatoes_j0nbil.jpg",
+    category: "Main Courses",
+    featured: true,
+    dietary: ["Spiced", "Hearty Meal", "Halal Friendly"],
+  },
+  {
+    id: 13,
+    name: "Spicy Garlic Chicken Stir-Fry",
+    description:
+      "Tender chicken chunks stir-fried with mushrooms, red onions, and chili in a rich garlic sauce, topped with fresh herbs and spring onions.",
+    price: 750,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599220/imgi_4_19050135_266720253802665_5099028510031216640_n_ctjr46.jpg",
+    category: "Main Courses",
+    featured: true,
+    dietary: ["Spicy"],
+  },
+  {
+    id: 14,
+    name: "Grilled Pineapple Chicken Salad",
+    description:
+      "A vibrant, wholesome salad featuring juicy grilled chicken breast glazed with a sweet-savory sauce, paired with char-grilled pineapple rings, creamy avocado slices, fresh cherry tomatoes, crisp cucumber, red onions, and mixed greens, all sprinkled with sesame seeds.",
+    price: 820,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599224/imgi_13_18514063_130342017525944_5463796908499664896_n_nqvyni.jpg",
+    category: "Main Courses",
+    featured: true,
+    dietary: ["Gluten-Free", "Dairy-Free"],
+  },
+  {
+    id: 15,
+    name: "Tomato & Onion Kachumbari",
+    description:
+      "A fresh and zesty East African salad made with sliced red onions, ripe tomatoes, and chopped cilantro, lightly tossed in lemon juice for a bright and tangy flavor. Perfect as a side dish or light appetizer.",
+    price: 350,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599231/imgi_6_18809274_224490641389979_3602125419739873280_n_vf0lcs.jpg",
+    category: "Sides & Salads",
+    featured: true,
+    dietary: ["Vegan", "Gluten-Free", "Dairy-Free"],
+  },
+  {
+    id: 16,
+    name: "Strawberry Jelly & Cream Delight",
+    description:
+      "A refreshing dessert of vibrant strawberry-flavored jelly served in individual glass bowls, topped generously with a smooth layer of sweet cream. Light, fruity, and perfect for any occasion.",
+    price: 300,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599234/imgi_30_18646659_1045038015631315_2119548008180744192_n_pnet2w.jpg",
     category: "Desserts",
     featured: true,
     dietary: ["Vegetarian"],
   },
   {
-    id: 6,
-    name: "Lobster Bisque",
-    description: "Rich and creamy lobster soup with a touch of brandy",
-    price: 22,
-    image: placeholderImg,
-    category: "Starters",
+    id: 17,
+    name: "Tropical Mango Pasta Salad",
+    description:
+      "A refreshing twist on pasta salad featuring penne pasta tossed with sweet mango chunks, shredded carrots, green bell peppers, and a light tangy dressing. A colorful and fruity fusion perfect for warm days.",
+    price: 600,
+    image:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599237/imgi_5_18809672_790616011087527_1954340862779457536_n_zhx50l.jpg",
+    category: "Sides & Salads",
     featured: true,
-    dietary: ["Chef's Special"],
+    dietary: ["Vegetarian", "Dairy-Free"],
   },
 ];
 
