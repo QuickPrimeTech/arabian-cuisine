@@ -15,54 +15,39 @@ const placeholderImg =
 
 const galleryImages = [
   {
-    src: placeholderImg,
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594493/weddingGallery7_ni7ya7.jpg",
     caption: "Garden Ceremony",
     description: "Intimate outdoor ceremonies surrounded by blooming flowers",
   },
   {
-    src: placeholderImg,
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594490/weddingGallery1_lqucmj.jpg",
     caption: "Garden Ceremony",
     description: "Intimate outdoor ceremonies surrounded by blooming flowers",
   },
   {
-    src: placeholderImg,
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594491/weddingGallery4_ak2pdo.jpg",
     caption: "Garden Ceremony",
     description: "Intimate outdoor ceremonies surrounded by blooming flowers",
   },
   {
-    src: placeholderImg,
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594489/weddingGallery3_dpoc5v.jpg",
     caption: "Garden Ceremony",
     description: "Intimate outdoor ceremonies surrounded by blooming flowers",
   },
   {
-    src: placeholderImg,
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594489/weddingGallery2_lnzqvf.jpg",
     caption: "Garden Ceremony",
     description: "Intimate outdoor ceremonies surrounded by blooming flowers",
   },
   {
-    src: placeholderImg,
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594487/weddingGallery5_ubi013.jpg",
     caption: "Candlelit Dinner",
     description: "Romantic evening receptions with ambient lighting",
   },
   {
-    src: placeholderImg,
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594486/weddingGallery6_w4ntml.jpg",
     caption: "Elegant Interior",
     description: "Sophisticated indoor spaces with panoramic views",
-  },
-  {
-    src: placeholderImg,
-    caption: "Sunset Terrace",
-    description: "Breathtaking terrace overlooking the city skyline",
-  },
-  {
-    src: placeholderImg,
-    caption: "Bridal Suite",
-    description: "Private preparation space for the wedding party",
-  },
-  {
-    src: placeholderImg,
-    caption: "Reception Hall",
-    description: "Grand ballroom perfect for dancing and celebration",
   },
 ];
 
