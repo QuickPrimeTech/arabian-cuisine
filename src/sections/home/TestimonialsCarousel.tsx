@@ -104,8 +104,8 @@ export default function TestimonialsCarousel() {
           What Our Guests Say
         </h2>
         <p className="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">
-          Discover why food enthusiasts and critics consistently choose Bella
-          Vista for exceptional dining experiences.
+          Discover why food enthusiasts and critics consistently choose Arabian
+          Cuisine for exceptional dining experiences.
         </p>
       </div>
       <Carousel setApi={setApi} opts={{ loop: true }} className="w-full">

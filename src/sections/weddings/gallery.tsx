@@ -9,55 +9,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
-const galleryImages = [
-  {
-    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594493/weddingGallery7_ni7ya7.jpg",
-    caption: "Garden Ceremony",
-    description: "Intimate outdoor ceremonies surrounded by blooming flowers",
-  },
-  {
-    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594490/weddingGallery1_lqucmj.jpg",
-    caption: "Garden Ceremony",
-    description: "Intimate outdoor ceremonies surrounded by blooming flowers",
-  },
-  {
-    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594491/weddingGallery4_ak2pdo.jpg",
-    caption: "Garden Ceremony",
-    description: "Intimate outdoor ceremonies surrounded by blooming flowers",
-  },
-  {
-    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594489/weddingGallery3_dpoc5v.jpg",
-    caption: "Garden Ceremony",
-    description: "Intimate outdoor ceremonies surrounded by blooming flowers",
-  },
-  {
-    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594489/weddingGallery2_lnzqvf.jpg",
-    caption: "Garden Ceremony",
-    description: "Intimate outdoor ceremonies surrounded by blooming flowers",
-  },
-  {
-    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594487/weddingGallery5_ubi013.jpg",
-    caption: "Candlelit Dinner",
-    description: "Romantic evening receptions with ambient lighting",
-  },
-  {
-    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594486/weddingGallery6_w4ntml.jpg",
-    caption: "Elegant Interior",
-    description: "Sophisticated indoor spaces with panoramic views",
-  },
-];
+import { weddingGallery } from "@/lib/data";
 
 export function VenueGallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % galleryImages.length);
+    setCurrentIndex((prev) => (prev + 1) % weddingGallery.length);
   };
 
   const prevSlide = () => {
     setCurrentIndex(
-      (prev) => (prev - 1 + galleryImages.length) % galleryImages.length
+      (prev) => (prev - 1 + weddingGallery.length) % weddingGallery.length
     );
   };
 
@@ -78,18 +41,18 @@ export function VenueGallery() {
         <div className="relative mb-12">
           <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
             <Image
-              src={galleryImages[currentIndex].src || "/placeholder.svg"}
-              alt={galleryImages[currentIndex].caption}
+              src={weddingGallery[currentIndex].src || "/placeholder.svg"}
+              alt={weddingGallery[currentIndex].caption}
               fill
               className="object-cover transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
             <div className="absolute bottom-8 left-8 text-white">
               <h3 className="text-2xl md:text-3xl font-serif mb-2">
-                {galleryImages[currentIndex].caption}
+                {weddingGallery[currentIndex].caption}
               </h3>
               <p className="text-lg opacity-90">
-                {galleryImages[currentIndex].description}
+                {weddingGallery[currentIndex].description}
               </p>
             </div>
           </div>
@@ -110,7 +73,7 @@ export function VenueGallery() {
         </div>
         <Carousel className="w-full">
           <CarouselContent className="-ml-1">
-            {galleryImages.map((image, index) => (
+            {weddingGallery.map((image, index) => (
               <CarouselItem
                 className="basis-1/3 md:basis-1/4 lg:basis-1/6 w-full aspect-video"
                 key={index}

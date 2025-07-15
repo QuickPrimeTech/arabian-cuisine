@@ -7,7 +7,7 @@ const realWeddings = [
     date: "October 2023",
     image: "/placeholder.svg?height=400&width=600",
     quote:
-      "Bella Vista made our dream wedding come true. Every detail was perfect, from the stunning venue to the incredible food. Our guests are still talking about it!",
+      "Arabian Cuisine made our dream wedding come true. Every detail was perfect, from the stunning venue to the incredible food. Our guests are still talking about it!",
     rating: 5,
     details: "Garden ceremony for 85 guests with elegant reception",
   },
@@ -16,7 +16,7 @@ const realWeddings = [
     date: "September 2023",
     image: "/placeholder.svg?height=400&width=600",
     quote:
-      "The team at Bella Vista went above and beyond. The coordination was flawless, and the cuisine was absolutely divine. We couldn't have asked for more.",
+      "The team at Arabian Cuisine went above and beyond. The coordination was flawless, and the cuisine was absolutely divine. We couldn't have asked for more.",
     rating: 5,
     details: "Intimate dinner celebration for 45 guests",
   },
@@ -48,7 +48,7 @@ export function Testimonials() {
               Real Weddings & Testimonials
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Love stories that came to life at Bella Vista - hear from our
+              Love stories that came to life at Arabian Cuisine - hear from our
               happy couples
             </p>
           </div>
@@ -125,7 +125,7 @@ export function Testimonials() {
               Based on 50+ wedding celebrations
             </p>
             <p className="text-sm text-muted-foreground">
-              100% of couples would recommend Bella Vista
+              100% of couples would recommend Arabian Cuisine
             </p>
           </div>
         </div>
