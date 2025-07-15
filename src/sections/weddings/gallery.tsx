@@ -10,9 +10,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const placeholderImg =
-  "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382744/imgi_40_88750_dj7anm.jpg";
-
 const galleryImages = [
   {
     src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752594493/weddingGallery7_ni7ya7.jpg",
