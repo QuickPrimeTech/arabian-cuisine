@@ -16,7 +16,7 @@ export default function GalleryHeader() {
       <div className="relative z-20 py-12">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <div className="inline-block px-4 py-2 rounded-full text-sm font-medium mb-4  ">
+            <div className="inline-block bg-secondary/20 text-secondary px-4 py-2 rounded-full text-sm font-medium mb-4  ">
               Gallery
             </div>
             <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">
@@ -31,6 +31,5 @@ export default function GalleryHeader() {
         </div>
       </div>
     </section>
-
   );
 }

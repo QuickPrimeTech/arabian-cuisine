@@ -1,85 +1,50 @@
-// components/menu-card.tsx
 import Image from "next/image";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+import { Card, CardContent } from "@/components/ui/card";
+import { MenuItem } from "@/types/menu";
+import { Star } from "lucide-react";
 
-export function MenuCard({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+export function MenuCard({ item }: { item: MenuItem }) {
   return (
-    <Card
-      className={cn(
-        "overflow-hidden transition-shadow hover:shadow-lg py-0",
-        className
-      )}
-    >
-      {children}
-    </Card>
-  );
-}
-
-export function MenuCardImage({
-  src,
-  alt,
-  badge,
-}: {
-  src: string;
-  alt: string;
-  badge?: string;
-}) {
-  return (
-    <div className="relative h-48 w-full">
-      <Image src={src} alt={alt} fill className="object-cover" />
-      {badge && (
-        <span className="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded-full">
-          {badge}
-        </span>
-      )}
-    </div>
-  );
-}
-
-export function MenuCardHeaderContent({
-  title,
-  price,
-}: {
-  title: string;
-  price: number;
-}) {
-  return (
-    <CardHeader className="flex flex-row items-center justify-between pb-0">
-      <h3 className="font-bold text-lg">{title}</h3>
-      <span className="font-medium text-primary">${price.toFixed(2)}</span>
-    </CardHeader>
-  );
-}
-
-export function MenuCardContent({
-  description,
-  tags,
-}: {
-  description: string;
-  tags: string[];
-}) {
-  return (
-    <CardContent className="space-y-3 pb-4">
-      <p className="text-muted-foreground text-sm line-clamp-2">
-        {description}
-      </p>
-      <div className="flex gap-2 flex-wrap">
-        {tags.map((tag) => (
-          <span
-            key={tag}
-            className="text-xs bg-secondary text-foreground px-2 py-1 rounded-full"
-          >
-            {tag}
-          </span>
-        ))}
+    <Card className="w-full h-full overflow-hidden group border border-gray-700 hover:shadow-lg transition-all">
+      <div className="relative aspect-[4/3] overflow-hidden">
+        <Image
+          src={item.image || "/placeholder.svg"}
+          alt={item.name}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        {item.featured && (
+          <div className="absolute top-4 left-4 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium flex items-center space-x-1">
+            <Star className="h-3 w-3" />
+            <span>Featured</span>
+          </div>
+        )}
+        {item.dietary.length > 0 && (
+          <div className="absolute top-4 right-4 flex flex-wrap gap-1">
+            {item.dietary.map((diet) => (
+              <span
+                key={diet}
+                className="bg-emerald-600 text-white px-2 py-1 rounded-full text-xs font-medium"
+              >
+                {diet}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
-    </CardContent>
+      <CardContent className="p-6">
+        <div className="flex justify-between items-start mb-3">
+          <h3 className="text-lg font-semibold">{item.name}</h3>
+          <span className="text-xl font-bold text-secondary">
+            Ksh {item.price}
+          </span>
+        </div>
+        <p className="text-gray-400 mb-4 leading-relaxed">{item.description}</p>
+        <span className="inline-block px-3 py-1 bg-secondary/20 text-secondary text-sm rounded-full font-medium">
+          {item.category}
+        </span>
+      </CardContent>
+    </Card>
   );
 }

@@ -85,8 +85,8 @@ function GalleryFilters({
   return (
     <section className="sticky top-17 z-50 py-2 border-b bg-background/80">
       <div className="container mx-auto px-4">
-        <ScrollArea className="w-full">
-          <div className="flex w-max gap-4 mb-2">
+        <ScrollArea className="w-full rounded-lg bg-light-black py-3 px-4 flex flex-col gap-2 lg:bg-transparent">
+          <div className="flex w-max gap-4">
             {filters.map((filter) => (
               <Button
                 key={filter.id}

@@ -46,7 +46,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <Section className="bg-secondary/30">
+    <Section className="bg-light-black">
       <Header>
         <Title>Meet Our Team</Title>
         <SubTitle>

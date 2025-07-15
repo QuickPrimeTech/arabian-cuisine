@@ -1,3 +1,6 @@
+import { placeholderImg } from "@/sections/about/hero";
+import { MenuItem } from "@/types/menu";
+
 export const menuCategories = ["All", "starter", "main", "dessert", "beverage"];
 
 export const menuFilters = [
@@ -9,17 +12,17 @@ export const menuFilters = [
   "popular",
 ];
 
-export const menuItems = [
+export const menuItems: MenuItem[] = [
   {
     id: 1,
     name: "Truffle Risotto",
     description:
       "Creamy Arborio rice with wild mushrooms, finished with truffle oil and Parmesan",
     price: 24,
-    image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1749756966/IMG_9660-2-scaled_yy7iit.jpg",
+    image: placeholderImg,
     category: "Main Courses",
-    tags: ["Vegetarian", "Chef's Special"],
+    featured: true,
+    dietary: ["Vegetarian", "Chef's Special"],
   },
   {
     id: 2,
@@ -27,10 +30,10 @@ export const menuItems = [
     description:
       "Pan-seared scallops with cauliflower purée, crispy pancetta, and herb oil",
     price: 32,
-    image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1749757399/1673539598595_v6dd24.webp",
+    image: placeholderImg,
     category: "Seafood",
-    tags: ["Chef's Special", "Seasonal"],
+    featured: true,
+    dietary: ["Chef's Special", "Seasonal"],
   },
   {
     id: 3,
@@ -38,10 +41,10 @@ export const menuItems = [
     description:
       "Tender beef fillet wrapped in mushroom duxelles and puff pastry, served with red wine jus",
     price: 42,
-    image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1749757499/perfect-beef-wellington-105140-1_mx538s.webp",
+    image: placeholderImg,
     category: "Main Courses",
-    tags: ["Chef's Special"],
+    featured: true,
+    dietary: ["Chef's Special"],
   },
   {
     id: 4,
@@ -49,30 +52,30 @@ export const menuItems = [
     description:
       "Creamy burrata with heirloom tomatoes, basil, and aged balsamic",
     price: 18,
-    image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1749822054/peach-burrata-salad-f_i-2_lqnkkz.jpg",
+    image: placeholderImg,
     category: "Starters",
-    tags: ["Vegetarian", "Seasonal"],
+    featured: true,
+    dietary: ["Vegetarian", "Seasonal"],
   },
   {
     id: 5,
     name: "Chocolate Soufflé",
     description: "Warm chocolate soufflé with vanilla bean ice cream",
     price: 14,
-    image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1749822158/1484024436574_wunubv.webp",
+    image: placeholderImg,
     category: "Desserts",
-    tags: ["Vegetarian"],
+    featured: true,
+    dietary: ["Vegetarian"],
   },
   {
     id: 6,
     name: "Lobster Bisque",
     description: "Rich and creamy lobster soup with a touch of brandy",
     price: 22,
-    image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1749822228/Depositphotos_65928549_L-1_w7q61q.jpg",
+    image: placeholderImg,
     category: "Starters",
-    tags: ["Chef's Special"],
+    featured: true,
+    dietary: ["Chef's Special"],
   },
 ];
 
@@ -148,49 +151,49 @@ export const teamMembers = [
 export const galleryImages = [
   {
     id: 1,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749847942/crumble-2024x1518_yxs0ca.jpg",
+    src: placeholderImg,
     alt: "Signature dish plating",
     category: "Food",
   },
   {
     id: 2,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749830847/1080_stwdxw.jpg",
+    src: placeholderImg,
     alt: "Restaurant interior with ambient lighting",
     category: "Interior",
   },
   {
     id: 3,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749806337/blini-with-cream-cheese-and-smoked-salmon-515810_vaetha.jpg",
+    src: placeholderImg,
     alt: "Chef preparing a dish in the kitchen",
     category: "Food",
   },
   {
     id: 4,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749831004/Fully-Automatic-Terrace-Roof-Retractable-Sliding-and-Folding-Luxury-Outdoor-Patio-Pergola-Water-Proof_srjll1.jpg",
+    src: placeholderImg,
     alt: "Outdoor dining area",
     category: "Exterior",
   },
   {
     id: 5,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749830743/RotterdamRendering_DiningRoom_1_HAL6278_mx63yp.jpg",
+    src: placeholderImg,
     alt: "Private dining room setup",
     category: "Private Dining",
   },
   {
     id: 6,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749798320/114f3948_sazyjm.jpg",
+    src: placeholderImg,
     alt: "Wedding reception at the restaurant",
     category: "Events",
   },
   {
     id: 7,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749806475/chicken-shashlik-dry-recipe-card_hmatjy.jpg",
+    src: placeholderImg,
     alt: "Dessert platter presentation",
     category: "Food",
   },
   {
     id: 8,
-    src: "https://res.cloudinary.com/dhlyei79o/image/upload/v1749844860/PAB8263-HDR-scaled_dkwpxs.jpg",
+    src: placeholderImg,
     alt: "Bar area with craft cocktails",
     category: "Interior",
   },
