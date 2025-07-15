@@ -13,57 +13,59 @@ import { MenuCard } from "@/components/menu-card";
 const menuItems = [
   {
     id: 1,
-    name: "Truffle Risotto",
-    description:
-      "Creamy Arborio rice with black truffle, aged parmesan, and fresh herbs",
-    price: 3200,
+    name: " Grilled Tandoori Chicken Leg Quarter.",
+    description: "Grilled or baked until slightly charred and juicy",
+    price: 600,
     image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382748/imgi_46_88735_tua4eg.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752581383/Grilled_Tandoori_Chicken_Leg_Quarter._t4wdmw.jpg",
     category: "Main Course",
     featured: true,
     dietary: ["Vegetarian"],
   },
   {
     id: 2,
-    name: "Grilled Atlantic Salmon",
-    description: "Fresh salmon with lemon butter sauce and seasonal vegetables",
-    price: 2800,
+    name: "Chicken Biryani",
+    description:
+      "Aromatic basmati rice layered with tender chicken cooked in rich coastal spices, served with kachumbari and gravy.",
+    price: 750,
     image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382752/imgi_51_88739_kwvzux.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752581959/Chicken_Biryani_m6nzpy.jpg",
     category: "Main Course",
     featured: true,
     dietary: ["Gluten-Free"],
   },
   {
     id: 3,
-    name: "Dark Chocolate Soufflé",
-    description: "Rich dark chocolate soufflé with vanilla bean ice cream",
-    price: 1400,
+    name: "Kachumbari Salad",
+    description:
+      "Crisp lettuce, juicy tomatoes, red onions, cucumbers, and carrots seasoned with lemon and spice — a refreshing East African favorite.",
+    price: 200,
     image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382748/imgi_60_88748_r5s632.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752583050/imgi_56_AC9h4nqXMUbKFzQfwDXxSR9_c4AwKiFJMUKtdaw2uVcdxOeKVtNG-MUiweShR5-VBFKfG0ozQEwHnPbxpzOl90L8zAqM2jbiaJkWDw7WFZaY8Y_wc-43xG9b9lE8QbLFThucXkyUXn9LLw_s773-k-no_vqwxyd.jpg",
     category: "Dessert",
     featured: true,
     dietary: ["Vegetarian"],
   },
   {
     id: 4,
-    name: "Prime Beef Tenderloin",
+    name: "Cappuccino",
     description:
-      "Premium cut with red wine reduction and roasted fingerling potatoes",
-    price: 4200,
+      "Rich espresso topped with steamed milk and a velvety foam, served with a sprinkle of cocoa.",
+    price: 500,
     image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382747/imgi_48_88736_chv6ly.jpg",
-    category: "Main Course",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752583115/cappaccino_ijq3c7.jpg",
+    category: "Beverage",
     featured: true,
     dietary: [],
   },
   {
     id: 5,
-    name: "Lobster Bisque",
-    description: "Rich and creamy lobster soup with cognac and fresh herbs",
-    price: 1800,
+    name: "Mint Lemonade",
+    description:
+      "Mint Lemonade is a refreshing, chilled beverage made by blending fresh lemon juice, mint leaves, sugar (or honey), and cold water or soda water",
+    price: 250,
     image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382748/imgi_41_88731_rwo7m6.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752583588/mint-lemonade_yjox2x.jpg",
     category: "Appetizer",
     featured: true,
     dietary: [],

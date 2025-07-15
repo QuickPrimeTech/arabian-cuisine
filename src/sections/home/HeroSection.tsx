@@ -22,16 +22,16 @@ const slides = [
     primaryCta: { label: "Inquire Now", href: "/contact" },
     secondaryCta: { label: "Learn More", href: "/events" },
     image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382745/imgi_13_88749_gnirbv.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752580123/0715_1_wntacm.png",
   },
   {
-    title: "A Feast for the Senses",
+    title: "Most authentic Arabian dining experience.",
     description:
-      "Indulge in our exquisite dishes prepared with authentic flavors and a modern twist.",
+      "Indulge in our exquisite dishes prepared with the finest ingredients and traditional recipes.",
     primaryCta: { label: "Reserve a Table", href: "/reserve" },
     secondaryCta: { label: "View Menu", href: "/menu" },
     image:
-      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1751382745/chili-paneer-wet_eshtgw.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752580754/imgi_25_AF1QipPX2Y5IX87AaRFPnTPKdEZlJa2qDYFPMYHT2zXn_s844-k-no_sdewnx.jpg",
   },
   {
     title: "Follow Us Online",
@@ -42,7 +42,7 @@ const slides = [
       href: "https://instagram.com",
     },
     image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382744/imgi_9_88747_rxznwg.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752580891/imgi_41_AF1QipPqMF7q6xFJZETrEVJ2UZlR8nEpT_qUBsmZXG93_s762-k-no_e2c5g4.jpg",
   },
 ];
 
@@ -103,7 +103,7 @@ export default function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-black/80 to-black/0 z-0" />
 
               {/* Left-Aligned Content */}
-              <div className="relative z-10 text-white max-w-2xl space-y-6 animate-fade-in-up">
+              <div className="relative z-10 text-white max-w-4xl space-y-6 animate-fade-in-up">
                 <h1 className="header font-serif text-center lg:text-start">
                   {slide.title}
                 </h1>

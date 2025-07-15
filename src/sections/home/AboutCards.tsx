@@ -10,7 +10,7 @@ const aboutCards = [
     cta: "Learn More",
     href: "/about",
     image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382752/imgi_62_88753_gc6szm.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752584222/imgi_22_AF1QipN8mjJ4Mmz45O_dwns1kiSeCsM8u9rvcX-YTGie_s676-k-no_1_elkycq.jpg",
   },
   {
     title: "Private Events",
@@ -19,7 +19,7 @@ const aboutCards = [
     cta: "Host an Event",
     href: "/private-events",
     image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751389589/imgi_3_beach-dining-KOH-1400x580-v3_ayb7tp.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752584332/imgi_68_AC9h4npWJPSfTScDCihhSM7urEXMH922VMWtZ5Qsa0tAZgda3Rsl0l7KWf5RlrCZWgrLcRz9TCGWbzHiA-hJ5VmuZJJv1l0gS7FAWkda4oxyIYaI-iLtXcNzN-3azIL2pRYrMWjubA9KRg_s676-k-no_f8q5oy.jpg",
   },
   {
     title: "Dining Experience",
@@ -28,7 +28,7 @@ const aboutCards = [
     cta: "Reserve Table",
     href: "/reserve",
     image:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382744/imgi_4_88730_zqybgm.jpg",
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752580754/imgi_25_AF1QipPX2Y5IX87AaRFPnTPKdEZlJa2qDYFPMYHT2zXn_s844-k-no_sdewnx.jpg",
   },
 ];
 
