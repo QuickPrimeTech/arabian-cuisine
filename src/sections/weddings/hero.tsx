@@ -6,10 +6,10 @@ import { ArrowDown } from "lucide-react";
 import { DynamicImage } from "@/components/dynamic-image";
 
 const images = [
-  "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382745/imgi_13_88749_gnirbv.jpg",
-  "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382744/imgi_40_88750_dj7anm.jpg",
-  "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382744/imgi_9_88747_rxznwg.jpg",
-  "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382747/imgi_10_88733_xnczpl.jpg",
+  "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752580092/0715_3_j90gpu.png",
+  "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752580092/0715_3_j90gpu.png",
+  "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752580100/0715_4_jiwyly.png",
+  "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752580077/0715_ewhtxn.png",
 ];
 
 export function Hero() {
@@ -18,20 +18,20 @@ export function Hero() {
       {/* Fading Background Images */}
       <DynamicImage images={images} />
       {/* Dark Gradient Overlay */}
-      <div className="absolute inset-0 z-0 bg-radial from-black/50 from-40% to-black/0" />
+      <div className="absolute inset-0 z-0 bg-radial from-black/60 from-40% to-black/0" />
       {/* Left-Aligned Content */}
       <div className="relative z-10 text-white max-w-2xl space-y-6 animate-fade-in-up">
         <h1 className="header font-serif text-center">
-          Welcome to Arabian Cuisine
+          A Celebration of Love & Forever
         </h1>
         <p className="text-xl md:text-2xl leading-relaxed opacity-90 text-center">
-          Experience exceptional cuisine crafted with passion, served in an
-          atmosphere of elegance and warmth. Every meal is a celebration of
-          culinary artistry.
+          Step into our fairytale, where two hearts become one. Surrounded by
+          stars, laughter, and the warmth of loved ones, we invite you to share
+          in the magic of our wedding day.
         </p>
         <div className="flex flex-col items-center justify-center lg:flex-row gap-4 pt-4">
           <Button asChild>
-            <Link href="/reserve">
+            <Link href="#inquireNow">
               Inquire Now <ArrowDown />
             </Link>
           </Button>

@@ -1,11 +1,7 @@
-"use client";
-
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Instagram, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import LoadingSkeleton from "@/components/ui/LoadingSkeleton";
 
 import {
   Carousel,
@@ -21,7 +17,9 @@ interface TiktokPost {
   mediaUrl: string;
   caption?: string;
 }
-const tiktokLink = "https://www.tiktok.com/@thearabiancuisine";
+
+const link = "https://www.tiktok.com/@thearabiancuisine";
+
 const mockPosts: TiktokPost[] = [
   {
     id: "1",
@@ -68,22 +66,6 @@ const mockPosts: TiktokPost[] = [
 ];
 
 export default function TiktokFeed() {
-  const [posts, setPosts] = useState<TiktokPost[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setPosts(mockPosts);
-      setLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <LoadingSkeleton type="instagram" />;
-  }
-
   return (
     <section className="section flex flex-col items-center">
       {/* Header */}
@@ -97,11 +79,7 @@ export default function TiktokFeed() {
           moments, seasonal specials, and culinary inspiration.
         </p>
         <Button asChild>
-          <Link
-            href="https://www.instagram.com/thearabiancuisine_upperhill/?hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Link href={link} target="_blank" rel="noopener noreferrer">
             <span>@ariabiancuisine</span>
             <ExternalLink className="h-4 w-4" />
           </Link>
@@ -111,13 +89,13 @@ export default function TiktokFeed() {
       {/* Carousel */}
       <Carousel className="w-full max-w-6xl mx-auto mb-12">
         <CarouselContent>
-          {posts.map((post) => (
+          {mockPosts.map((post) => (
             <CarouselItem
               key={post.id}
               className="basis-full sm:basis-1/2 md:basis-1/3"
             >
               <Link
-                href={tiktokLink}
+                href={link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative aspect-square overflow-hidden rounded-lg hover-lift block"
@@ -143,11 +121,7 @@ export default function TiktokFeed() {
 
       {/* CTA Button */}
       <Button asChild>
-        <Link
-          href="https://www.instagram.com/thearabiancuisine_upperhill/?hl=en"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href={link} target="_blank" rel="noopener noreferrer">
           <FaTiktok className="h-5 w-5 mr-2" />
           Follow Us on Tiktok
         </Link>
