@@ -36,7 +36,7 @@ export function MenuCard({ item }: { item: MenuItem }) {
       <CardContent className="p-6">
         <div className="flex justify-between items-start mb-3">
           <h3 className="text-lg font-semibold">{item.name}</h3>
-          <span className="text-xl font-bold text-secondary">
+          <span className="text-xl whitespace-nowrap font-bold text-secondary">
             Ksh {item.price}
           </span>
         </div>

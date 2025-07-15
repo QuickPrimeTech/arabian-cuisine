@@ -12,61 +12,59 @@ import {
 } from "@/components/ui/carousel";
 import { FaTiktok } from "react-icons/fa6";
 
-interface InstagramPost {
+interface TiktokPost {
   id: string;
   mediaUrl: string;
-  permalink: string;
   caption?: string;
 }
-
 const link = "https://www.tiktok.com/@thearabiancuisine";
 
-const mockPosts: InstagramPost[] = [
+const mockPosts: TiktokPost[] = [
   {
     id: "1",
     mediaUrl:
-      "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382750/imgi_52_88740_ww0j0r.jpg",
-    permalink: link,
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752585549/tiktok1_zj8uhp.png",
     caption: "Fresh truffle risotto",
   },
   {
     id: "2",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382757/imgi_64_88755_bmmbg2.jpg",
-    permalink: link,
     caption: "Elegant dining room",
   },
   {
     id: "3",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382748/imgi_49_88737_sbmdc4.jpg",
-    permalink: link,
     caption: "Chef's special",
   },
   {
     id: "4",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382752/imgi_54_88848_fjxtjm.jpg",
-    permalink: link,
     caption: "Wine selection",
   },
   {
     id: "5",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382745/imgi_65_88756_asiqmf.jpg",
-    permalink: link,
     caption: "Dessert presentation",
   },
   {
     id: "6",
     mediaUrl:
       "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382753/imgi_59_88746_nhq00n.jpg",
-    permalink: link,
+    caption: "Private dining",
+  },
+  {
+    id: "7",
+    mediaUrl:
+      "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752586101/tiktok7_r4chbr.png",
     caption: "Private dining",
   },
 ];
 
-export default function InstagramFeed() {
+export default function TiktokFeed() {
   return (
     <section className="section flex flex-col items-center">
       {/* Header */}
@@ -96,7 +94,7 @@ export default function InstagramFeed() {
               className="basis-full sm:basis-1/2 md:basis-1/3"
             >
               <Link
-                href={post.permalink}
+                href={link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative aspect-square overflow-hidden rounded-lg hover-lift block"
