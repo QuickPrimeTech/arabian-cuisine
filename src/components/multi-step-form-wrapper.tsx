@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
+
 "use client";
 
 import React, { useContext, createContext, useCallback, useState } from "react";
@@ -11,9 +13,17 @@ import {
   Send,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useForm, UseFormReturn, DefaultValues } from "react-hook-form";
+import {
+  useForm,
+  UseFormReturn,
+  DefaultValues,
+  Path,
+  PathValue,
+  FieldErrors,
+} from "react-hook-form";
+import { z, ZodRawShape } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { ReservationFormData } from "@/types/reserve";
 
 type FormData = Record<string, unknown>;
 
@@ -36,13 +46,11 @@ interface MultiStepFormContextType<T extends FormData = FormData> {
 }
 
 const MultiStepFormContext = createContext<
-  MultiStepFormContextType<any> | undefined
+  MultiStepFormContextType<ReservationFormData> | undefined
 >(undefined);
 
-export function useMultiStepForm<T extends FormData = FormData>() {
-  const context = useContext(
-    MultiStepFormContext
-  ) as MultiStepFormContextType<T>;
+export function useMultiStepForm() {
+  const context = useContext(MultiStepFormContext);
   if (!context) {
     throw new Error(
       "useMultiStepForm must be used within a MultiStepFormWrapper"
@@ -56,7 +64,7 @@ export interface StepProps<T extends FormData = FormData> {
   title?: string;
   description?: string;
   validate?: (data: T) => Promise<boolean> | boolean;
-  schema?: z.ZodObject<any>;
+  schema?: z.ZodObject<z.ZodRawShape> & { parse: (data: unknown) => T };
   canSkip?: boolean;
   isOptional?: boolean;
   validationMessage?: string;
@@ -79,7 +87,7 @@ export interface MultiStepFormWrapperProps<T extends FormData = FormData> {
   onStepChange?: (prevStep: number, nextStep: number) => void;
   schema?: z.ZodType<T>;
   persistKey?: string;
-  onStepValidationError?: (step: number, errors: any) => void;
+  onStepValidationError?: (step: number, errors: FieldErrors<T>) => void;
   showProgressBar?: boolean;
   allowStepReset?: boolean;
   autoSave?: boolean;
@@ -105,7 +113,6 @@ export function MultiStepFormWrapper<T extends FormData = FormData>({
   navigationPosition = "bottom",
   nextButtonText = "Next",
   prevButtonText = "Back",
-  completeButtonText = "Complete",
   onStepChange,
   schema,
   persistKey,
@@ -123,11 +130,13 @@ export function MultiStepFormWrapper<T extends FormData = FormData>({
 
   const prepareDefaultValues = useCallback(
     (initialData: Partial<T>, schema?: z.ZodType<T>): DefaultValues<T> => {
-      const defaultValues = { ...initialData } as Record<string, any>;
+      const defaultValues: Record<keyof T, unknown> = {
+        ...initialData,
+      } as Record<keyof T, unknown>;
 
-      if (schema && "shape" in schema) {
-        const shapes = (schema as any).shape;
-        Object.keys(shapes).forEach((key) => {
+      if (schema && schema instanceof z.ZodObject) {
+        const shape = schema.shape as ZodRawShape;
+        (Object.keys(shape) as Array<keyof T>).forEach((key) => {
           if (defaultValues[key] === undefined) {
             defaultValues[key] = "";
           }
@@ -146,9 +155,13 @@ export function MultiStepFormWrapper<T extends FormData = FormData>({
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [stepErrors, setStepErrors] = useState<Record<number, string>>({});
 
-  const form = useForm<T>({
+  type FormData = z.infer<typeof schema>;
+
+  const form = useForm({
     defaultValues: prepareDefaultValues(initialData, schema),
-    resolver: schema ? zodResolver(schema) : undefined,
+    resolver: schema
+      ? zodResolver<any, T, undefined>(schema as any)
+      : undefined,
     mode: "onChange",
   });
 
@@ -187,7 +200,10 @@ export function MultiStepFormWrapper<T extends FormData = FormData>({
         setFormData((prevData) => ({ ...prevData, ...parsedData }));
 
         Object.entries(parsedData).forEach(([key, value]) => {
-          form.setValue(key as any, value as any);
+          const pathKey = key as Path<T>;
+          const pathValue = value as PathValue<T, typeof pathKey>;
+
+          form.setValue(pathKey, pathValue as any);
         });
       }
     } catch (error) {
@@ -221,7 +237,10 @@ export function MultiStepFormWrapper<T extends FormData = FormData>({
       });
 
       Object.entries(stepData).forEach(([key, value]) => {
-        form.setValue(key as any, value as any);
+        const pathKey = key as Path<T>;
+        const pathValue = value as PathValue<T, typeof pathKey>;
+
+        form.setValue(pathKey, pathValue as any);
       });
     },
     [form]
@@ -265,8 +284,8 @@ export function MultiStepFormWrapper<T extends FormData = FormData>({
     if (stepSchema && !canSkip) {
       setIsValidating(true);
       try {
-        const stepFields = Object.keys(stepSchema.shape);
-        const result = await form.trigger(stepFields as any);
+        const stepFields = Object.keys(stepSchema.shape) as Path<T>[];
+        const result = await form.trigger(stepFields);
         if (!result) {
           const formErrors = form.formState.errors;
           const errorMessage =
@@ -492,7 +511,7 @@ export function MultiStepFormWrapper<T extends FormData = FormData>({
 
   return (
     <div className={cn("max-w-2xl mx-auto", className)}>
-      <MultiStepFormContext.Provider value={contextValue}>
+      <MultiStepFormContext.Provider value={contextValue as any}>
         {showStepIndicator && renderStepIndicators()}
 
         {showProgressBar && (

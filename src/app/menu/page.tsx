@@ -24,7 +24,9 @@ export default function MenuPage() {
     // Filter by tags
     const matchesFilters =
       activeFilters.length === 0 ||
-      activeFilters.some((filter) => item.tags.includes(filter));
+      activeFilters.some(
+        (filter) => item.dietary && item.dietary.includes(filter)
+      );
 
     return matchesSearch && matchesCategory && matchesFilters;
   });

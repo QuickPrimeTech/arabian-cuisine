@@ -1,8 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Star } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import {
   Carousel,
   CarouselContent,

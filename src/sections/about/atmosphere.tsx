@@ -9,7 +9,6 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
-import { placeholderImg } from "./hero";
 
 export default function AtmosphereSection() {
   return (

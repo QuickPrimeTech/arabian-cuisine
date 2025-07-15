@@ -119,7 +119,7 @@ export function ReservationMultiStepForm() {
 }
 
 function PersonalInfoStep() {
-  const { form } = useMultiStepForm<FormValues>();
+  const { form } = useMultiStepForm();
 
   return (
     <Form {...form}>
@@ -171,7 +171,7 @@ function PersonalInfoStep() {
 }
 
 function ReservationStep() {
-  const { form } = useMultiStepForm<FormValues>();
+  const { form } = useMultiStepForm();
 
   return (
     <Form {...form}>
@@ -290,7 +290,7 @@ function ReservationStep() {
 }
 
 function NotesStep() {
-  const { form } = useMultiStepForm<FormValues>();
+  const { form } = useMultiStepForm();
   const values = form.watch();
 
   return (
@@ -322,7 +322,7 @@ function NotesStep() {
           </CardHeader>
           <CardContent className="text-sm text-muted-foreground text-center">
             <p>Your reservation has been submitted successfully.</p>
-            <p>We'll be in touch shortly. Thank you!</p>
+            <p>We&apos;ll be in touch shortly. Thank you!</p>
           </CardContent>
         </Card>
       ) : (

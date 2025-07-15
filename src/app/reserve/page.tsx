@@ -1,8 +1,37 @@
 import { ReservationMultiStepForm } from "@/sections/reserve/form";
-import ReservationPage from "./reservation-page";
 import { H1, Header, SubTitle } from "@/components/typography";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calendar, Clock, Mail, Phone, Users } from "lucide-react";
+const statsData = [
+  {
+    icon: Calendar,
+    value: "7",
+    label: "Days a Week",
+  },
+  {
+    icon: Clock,
+    value: "6",
+    label: "Hours Daily",
+  },
+  {
+    icon: Users,
+    value: "120",
+    label: "Seat Capacity",
+  },
+];
+
+const contactData = [
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "(555) 123-4567",
+  },
+  {
+    icon: Mail,
+    label: "Email",
+    value: "reservations@restaurant.com",
+  },
+];
 
 export default function Page() {
   return (
@@ -27,20 +56,20 @@ export default function Page() {
                 <CardTitle className="text-xl">Contact Information</CardTitle>
               </CardHeader>
               <CardContent className="p-6 space-y-4">
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5" />
-                  <div>
-                    <p className="font-semibold">Phone</p>
-                    <p>(555) 123-4567</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5" />
-                  <div>
-                    <p className="font-semibold">Email</p>
-                    <p>reservations@restaurant.com</p>
-                  </div>
-                </div>
+                {contactData.map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={index} className="flex items-center gap-3">
+                      <div className="rounded-full p-2 bg-secondary/20 text-secondary">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <p className="font-semibold">{item.label}</p>
+                        <p>{item.value}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </CardContent>
             </Card>
 
@@ -70,21 +99,18 @@ export default function Page() {
             </Card>
 
             <div className="grid grid-cols-3 gap-4">
-              <div className="p-4 text-center">
-                <Calendar className="h-8 w-8 mx-auto mb-2" />
-                <p className="text-2xl font-bold">7</p>
-                <p className="text-sm">Days a Week</p>
-              </div>
-              <div className="p-4 text-center">
-                <Clock className="h-8 w-8 mx-auto mb-2" />
-                <p className="text-2xl font-bold">6</p>
-                <p className="text-sm">Hours Daily</p>
-              </div>
-              <div className="p-4 text-center">
-                <Users className="h-8 w-8 mx-auto mb-2" />
-                <p className="text-2xl font-bold">120</p>
-                <p className="text-sm">Seat Capacity</p>
-              </div>
+              {statsData.map((stat, idx) => {
+                const Icon = stat.icon;
+                return (
+                  <div key={idx} className="p-4 flex flex-col items-center">
+                    <div className="rounded-full p-3 bg-secondary/20 text-secondary mb-2 w-fit">
+                      <Icon className="size-6 mx-auto" />
+                    </div>
+                    <p className="font-bold">{stat.value}</p>
+                    <p className="text-sm">{stat.label}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

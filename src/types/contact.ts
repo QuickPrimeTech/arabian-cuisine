@@ -24,8 +24,3 @@ export type ContactItem = {
   title: string;
   lines: Line[];
 };
-
-// Example usage:
-const contactItems: ContactItem[] = [
-  /* ... */
-];
