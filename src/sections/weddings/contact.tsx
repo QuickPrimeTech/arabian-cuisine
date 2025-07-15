@@ -70,7 +70,11 @@ export function LocationContact() {
   };
 
   return (
-    <section id="contact" className="section" aria-labelledby="contact-header">
+    <section
+      id="inquireNow"
+      className="section"
+      aria-labelledby="contact-header"
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">

@@ -1,11 +1,7 @@
-"use client";
-
 import Link from "next/link";
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Instagram, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import LoadingSkeleton from "@/components/ui/LoadingSkeleton";
 
 import {
   Carousel,
@@ -71,22 +67,6 @@ const mockPosts: InstagramPost[] = [
 ];
 
 export default function InstagramFeed() {
-  const [posts, setPosts] = useState<InstagramPost[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setPosts(mockPosts);
-      setLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <LoadingSkeleton type="instagram" />;
-  }
-
   return (
     <section className="section flex flex-col items-center">
       {/* Header */}
@@ -110,7 +90,7 @@ export default function InstagramFeed() {
       {/* Carousel */}
       <Carousel className="w-full max-w-6xl mx-auto mb-12">
         <CarouselContent>
-          {posts.map((post) => (
+          {mockPosts.map((post) => (
             <CarouselItem
               key={post.id}
               className="basis-full sm:basis-1/2 md:basis-1/3"

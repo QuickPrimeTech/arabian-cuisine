@@ -31,7 +31,7 @@ export function Hero() {
         </p>
         <div className="flex flex-col items-center justify-center lg:flex-row gap-4 pt-4">
           <Button asChild>
-            <Link href="/reserve">
+            <Link href="#inquireNow">
               Inquire Now <ArrowDown />
             </Link>
           </Button>
