@@ -22,7 +22,7 @@ const tabs = [
 ];
 
 export function MenuShowcase() {
-  const [activeTab, setActiveTab] = useState("starters");
+  const [activeTab, setActiveTab] = useState("mains");
 
   const filteredItems = menuItems
     .filter((item) => item.category === categoryMap[activeTab])
