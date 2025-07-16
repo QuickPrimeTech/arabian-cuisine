@@ -31,12 +31,12 @@ export function Hero() {
         </p>
         <div className="flex flex-col items-center justify-center lg:flex-row gap-4 pt-4">
           <Button asChild>
-            <Link href="#inquireNow">
+            <Link href="#inquire-now">
               Inquire Now <ArrowDown />
             </Link>
           </Button>
           <Button variant={"outline"} asChild>
-            <Link href="/menu">See Ambiance</Link>
+            <Link href="#wedding-gallery">See Ambiance</Link>
           </Button>
         </div>
       </div>

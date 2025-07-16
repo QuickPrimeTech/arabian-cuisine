@@ -19,8 +19,8 @@ const slides = [
     title: "Weddings & Events",
     description:
       "Host your dream wedding with us — elegant settings, unforgettable moments, and world-class service await.",
-    primaryCta: { label: "Inquire Now", href: "/contact" },
-    secondaryCta: { label: "Learn More", href: "/events" },
+    primaryCta: { label: "Inquire Now", href: "/weddings#inquire-now" },
+    secondaryCta: { label: "Learn More", href: "/weddings" },
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752580123/0715_1_wntacm.png",
   },
@@ -38,8 +38,8 @@ const slides = [
     description:
       "Get a taste of our latest dishes and updates on social media. Stay connected!",
     primaryCta: {
-      label: "Follow on Instagram",
-      href: "https://instagram.com",
+      label: "Follow on Tiktok",
+      href: "https://www.tiktok.com/@thearabiancuisine",
     },
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752580891/imgi_41_AF1QipPqMF7q6xFJZETrEVJ2UZlR8nEpT_qUBsmZXG93_s762-k-no_e2c5g4.jpg",

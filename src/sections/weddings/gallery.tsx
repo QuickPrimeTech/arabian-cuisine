@@ -25,10 +25,17 @@ export function VenueGallery() {
   };
 
   return (
-    <section id="gallery" className="section">
+    <section
+      className="section"
+      id="wedding-gallery"
+      aria-labelledby="wedding-gallery-header"
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif text-gray-50 mb-4">
+          <h2
+            className="text-4xl md:text-5xl font-serif text-gray-50 mb-4"
+            id="wedding-gallery-header"
+          >
             Ambiance & Venue
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
