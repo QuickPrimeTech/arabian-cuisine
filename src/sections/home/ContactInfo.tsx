@@ -69,7 +69,7 @@ export default function ContactSummary() {
       <h2 className="header2 text-center mb-16 font-serif">
         Get In Touch With Us
       </h2>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Map Card */}
           <Card className="overflow-hidden shadow-lg bg-light-black border border-gray-700">

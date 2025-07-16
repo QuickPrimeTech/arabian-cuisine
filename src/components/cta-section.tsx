@@ -25,7 +25,7 @@ export default function CTASection({
 }: CTASectionProps) {
   return (
     <Section className={cn("bg-light-black", className)}>
-      <div className="container-custom text-center max-w-3xl mx-auto">
+      <div className="text-center max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
         {description && (
           <p className="text-muted-foreground mb-8 md:text-lg">{description}</p>

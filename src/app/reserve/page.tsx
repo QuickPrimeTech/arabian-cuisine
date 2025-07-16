@@ -116,7 +116,7 @@ export default function Page() {
         </div>
         {/* Footer Callout */}
         <div className="py-8">
-          <div className="container mx-auto px-4 text-center">
+          <div className="container mx-auto text-center">
             <p>
               For immediate assistance or same-day reservations, please call us
               directly at <span className="font-semibold">0722 720697</span>

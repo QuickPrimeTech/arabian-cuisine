@@ -38,7 +38,7 @@ export function Testimonials() {
       className="section"
       aria-labelledby="testimonials-header"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2
