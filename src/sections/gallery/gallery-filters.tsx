@@ -21,6 +21,7 @@ function GalleryFilters({
     { id: "all", name: "All Photos" },
     { id: "Food", name: "Food" },
     { id: "Wedding", name: "Wedding" },
+    { id: "Interior", name: "Interior" },
   ];
 
   return (
@@ -48,7 +49,6 @@ function GalleryFilters({
 
 type GalleryGridProps = {
   filteredImages: {
-    id: number;
     alt: string;
     category: string;
     src: string;
@@ -88,7 +88,7 @@ function GalleryGrid({ filteredImages, onReset }: GalleryGridProps) {
             <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
               {filteredImages.map((image, index) => (
                 <div
-                  key={image.id}
+                  key={index}
                   className="break-inside-avoid group relative overflow-hidden rounded-xl cursor-pointer"
                   onClick={() => openLightbox(index)}
                 >

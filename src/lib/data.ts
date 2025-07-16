@@ -253,20 +253,38 @@ export const weddingGallery = [
 
 export const galleryImages = [
   // Food images from menuItems
-  ...menuItems.map((item, index) => ({
-    id: index + 1,
+  ...menuItems.map((item) => ({
     src: item.image,
     alt: item.name,
     category: "Food",
   })),
 
   // Wedding images
-  ...weddingGallery.map((item, index) => ({
-    id: menuItems.length + index + 1,
+  ...weddingGallery.map((item) => ({
     src: item.src,
     alt: item.caption,
     category: "Wedding",
   })),
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752584650/imgi_27_AC9h4npAuT1VtCfpP372ogkKDHkxEaOU7_vxxV6IN5gZjSofCJslZReUsklTqtKTaQoiHffrozfXH8h-YZ-Jh8HJCyHd2UIdJdryY5NqJwJJkdqVVzutpVGwEyRQlTyF8Xb_3xgpmAm8H0dGy-Aj_s676-k-no_pcdelm.jpg",
+    alt: "interior image",
+    category: "Interior",
+  },
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752653972/atmosphere2_wmszrh.jpg",
+    alt: "interior image",
+    category: "Interior",
+  },
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752585833/tiktok.5_jmcrrd.png",
+    alt: "interior image",
+    category: "Interior",
+  },
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752585592/tiktok4_f96ics.png",
+    alt: "interior image",
+    category: "Interior",
+  },
 ];
 
 export const faqItems = [

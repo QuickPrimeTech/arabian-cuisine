@@ -7,7 +7,7 @@ const quickLinks = [
   { name: "Menu", href: "/menu" },
   { name: "About Us", href: "/about" },
   { name: "Gallery", href: "/gallery" },
-  { name: "Weddings", href: "/private-events" },
+  { name: "Weddings", href: "/weddings" },
   { name: "Contact", href: "/contact" },
   { name: "Reservations", href: "/reserve" },
 ];
@@ -162,6 +162,17 @@ export default function Footer() {
             © {new Date().getFullYear()} Arabian Restaurant. All rights
             reserved.
           </p>
+
+          <p className="text-gray-300">
+            Proudly made by{" "}
+            <Link
+              href={"https://quickprimetech.vercel.app/"}
+              className="underline hover:text-secondary"
+            >
+              QuickPrimeTech
+            </Link>
+          </p>
+
           <div className="flex space-x-6">
             <Link
               href="/privacy"

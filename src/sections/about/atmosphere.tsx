@@ -35,7 +35,7 @@ export default function AtmosphereSection() {
                 className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3"
               >
                 <div
-                  key={image.id}
+                  key={index}
                   className="relative aspect-16/9 rounded-lg overflow-hidden"
                 >
                   <Image
