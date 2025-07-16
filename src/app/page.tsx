@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import HeroSection from "@/sections/home/HeroSection";
 import MenuHighlights from "@/sections/home/MenuHighlights";
 import AboutCards from "@/sections/home/AboutCards";
@@ -8,7 +7,6 @@ import Gallery from "@/sections/home/Gallery";
 import FAQSection from "@/sections/home/FAQSection";
 import ContactInfo from "@/sections/home/ContactInfo";
 import TiktokFeed from "@/sections/home/Tiktok";
-import LoadingSkeleton from "@/components/ui/LoadingSkeleton";
 
 export const metadata = {
   title: "Arabian Cuisine Restaurant - Luxury Fine Dining Experience",
@@ -20,20 +18,14 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <Suspense fallback={<LoadingSkeleton type="menu-highlights" />}>
-        <MenuHighlights />
-      </Suspense>
+      <MenuHighlights />
       <AboutCards />
-      <Suspense fallback={<LoadingSkeleton type="testimonials" />}>
-        <TestimonialsCarousel />
-      </Suspense>
+      <TestimonialsCarousel />
       <CTASection />
       <Gallery />
       <FAQSection />
       <ContactInfo />
-      <Suspense fallback={<LoadingSkeleton type="instagram" />}>
-        <TiktokFeed />
-      </Suspense>
+      <TiktokFeed />
     </>
   );
 }

@@ -7,91 +7,26 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Utensils } from "lucide-react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { menuItems } from "@/lib/data";
 
-const placeholderImg =
-  "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382744/imgi_40_88750_dj7anm.jpg";
-
-const menuCategories = {
-  starters: [
-    {
-      name: "Truffle Arancini",
-      description: "Crispy risotto balls with wild mushroom truffle filling",
-      image: placeholderImg,
-    },
-    {
-      name: "Seared Scallops",
-      description: "Pan-seared with cauliflower purée and pancetta",
-      image: placeholderImg,
-    },
-    {
-      name: "Burrata Caprese",
-      description: "Fresh burrata with heirloom tomatoes and basil oil",
-      image: placeholderImg,
-    },
-  ],
-  mains: [
-    {
-      name: "Wagyu Beef Tenderloin",
-      description:
-        "Grilled to perfection with red wine jus and roasted vegetables",
-      image: placeholderImg,
-    },
-    {
-      name: "Chilean Sea Bass",
-      description: "Miso-glazed with jasmine rice and bok choy",
-      image: placeholderImg,
-    },
-    {
-      name: "Duck Breast",
-      description: "Confit leg with cherry gastrique and wild rice",
-      image: placeholderImg,
-    },
-  ],
-  desserts: [
-    {
-      name: "Chocolate Soufflé",
-      description: "Warm chocolate soufflé with vanilla bean ice cream",
-      image: placeholderImg,
-    },
-    {
-      name: "Lemon Tart",
-      description: "Classic French tart with raspberry coulis",
-      image: placeholderImg,
-    },
-    {
-      name: "Tiramisu",
-      description: "Traditional Italian dessert with espresso and mascarpone",
-      image: placeholderImg,
-    },
-  ],
-  drinks: [
-    {
-      name: "Signature Cocktails",
-      description: "Custom cocktails crafted for your special day",
-      image: placeholderImg,
-    },
-    {
-      name: "Wine Selection",
-      description: "Curated wines from renowned vineyards worldwide",
-      image: placeholderImg,
-    },
-    {
-      name: "Champagne Service",
-      description: "Premium champagne for toasts and celebrations",
-      image: placeholderImg,
-    },
-  ],
+const categoryMap: Record<string, string> = {
+  mains: "main",
+  desserts: "dessert",
+  drinks: "beverage",
 };
 
-export function MenuShowcase() {
-  const [activeTab, setActiveTab] = useState("starters");
+const tabs = [
+  { id: "mains", label: "Mains" },
+  { id: "desserts", label: "Desserts" },
+  { id: "drinks", label: "Drinks" },
+];
 
-  const tabs = [
-    { id: "starters", label: "Starters" },
-    { id: "mains", label: "Mains" },
-    { id: "desserts", label: "Desserts" },
-    { id: "drinks", label: "Drinks" },
-  ];
+export function MenuShowcase() {
+  const [activeTab, setActiveTab] = useState("mains");
+
+  const filteredItems = menuItems
+    .filter((item) => item.category === categoryMap[activeTab])
+    .slice(0, 3);
 
   return (
     <section
@@ -135,31 +70,29 @@ export function MenuShowcase() {
           </ScrollArea>
           {/* Menu Items */}
           <div className="grid md:grid-cols-3 gap-8">
-            {menuCategories[activeTab as keyof typeof menuCategories].map(
-              (item, index) => (
-                <Card
-                  key={index}
-                  className="rounded-2xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2"
-                >
-                  <div className="relative h-48">
-                    <Image
-                      src={item.image || "/placeholder.svg"}
-                      alt={item.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="p-3">
-                    <h3 className="text-xl font-serif text-card-foreground mb-3">
-                      {item.name}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                </Card>
-              )
-            )}
+            {filteredItems.map((item, index) => (
+              <Card
+                key={index}
+                className="rounded-2xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="relative h-48">
+                  <Image
+                    src={item.image || "/placeholder.svg"}
+                    alt={item.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-3">
+                  <h3 className="text-xl font-serif text-card-foreground mb-3">
+                    {item.name}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </Card>
+            ))}
           </div>
 
           {/* Custom Menu Note */}

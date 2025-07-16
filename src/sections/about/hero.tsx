@@ -1,7 +1,7 @@
 import { Section, Header, H1, SubTitle } from "@/components/typography";
 import Image from "next/image";
 export const placeholderImg =
-  "https://res.cloudinary.com/dhlyei79o/image/upload/v1751382744/imgi_40_88750_dj7anm.jpg";
+  "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752584756/imgi_50_AF1QipNPeEEIMtGfWFQnkE2vxikwHFGB-FCmFyGTYz4C_s967-k-no_fnpq6f.jpg";
 
 export default function AboutHeroSection() {
   return (

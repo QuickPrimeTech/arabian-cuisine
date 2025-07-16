@@ -6,25 +6,28 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, PhoneCall } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa6";
+import { Calendar } from "@/components/ui/calendar";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { format } from "date-fns";
 
 export const contactInfo = [
   {
     title: "Address",
     icon: MapPin,
-    content: (
-      <>
-        123 Elegant Avenue
-        <br />
-        Downtown District, City 12345
-      </>
-    ),
+    content: <>Kilimanjaro Rd, Nairobi</>,
   },
   {
     title: "Phone",
     icon: Phone,
-    content: "(555) 123-4567",
+    content: "0722 720697",
   },
   {
     title: "Email",
@@ -61,17 +64,20 @@ export function LocationContact() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e:
+      | React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+      | { target: { name: string; value: string } }
   ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   return (
     <section
-      id="inquireNow"
+      id="inquire-now"
       className="section"
       aria-labelledby="contact-header"
     >
@@ -156,16 +162,43 @@ export function LocationContact() {
                     placeholder="Phone Number"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="h-12 border-blush-200 focus:border-gold-500"
+                    className="h-12"
                   />
-                  <Input
-                    type="date"
-                    name="date"
-                    placeholder="Wedding Date"
-                    value={formData.date}
-                    onChange={handleChange}
-                    className="h-12 border-blush-200 focus:border-gold-500"
-                  />
+                  <Popover>
+                    <PopoverTrigger asChild>
+                      <Button
+                        variant="outline"
+                        className={`w-full bg-card border hover:bg-card/50 hover:text-card-foreground justify-start text-left h-12 ${
+                          formData.date
+                            ? "text-foreground"
+                            : "text-muted-foreground"
+                        }`}
+                      >
+                        {formData.date
+                          ? format(new Date(formData.date), "PPP")
+                          : "Select wedding date"}
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-auto p-0" align="start">
+                      <Calendar
+                        mode="single"
+                        selected={
+                          formData.date ? new Date(formData.date) : undefined
+                        }
+                        onSelect={(date) => {
+                          if (date) {
+                            handleChange({
+                              target: {
+                                name: "date",
+                                value: date.toISOString().split("T")[0], // ISO format for consistency
+                              },
+                            });
+                          }
+                        }}
+                        initialFocus
+                      />
+                    </PopoverContent>
+                  </Popover>
                 </div>
 
                 <Input
@@ -195,8 +228,22 @@ export function LocationContact() {
                   Prefer to call or text?
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                  <Button variant="outline">Call (555) 123-4567</Button>
-                  <Button variant="outline">WhatsApp Chat</Button>
+                  <Button variant="outline" asChild>
+                    <Link href={"tel:0722 720697"}>
+                      <PhoneCall /> Call 0722 720697
+                    </Link>
+                  </Button>
+                  <Button variant="outline" asChild>
+                    <Link
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href={
+                        "https://api.whatsapp.com/send/?phone=254722720697&text&type=phone_number&app_absent=0"
+                      }
+                    >
+                      <FaWhatsapp /> WhatsApp Chat
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </Card>

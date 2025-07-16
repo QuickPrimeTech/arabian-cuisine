@@ -1,5 +1,5 @@
+import { Skeleton } from "@/components/ui/skeleton";
 import { Star, Heart } from "lucide-react";
-import Image from "next/image";
 
 const realWeddings = [
   {
@@ -63,12 +63,7 @@ export function Testimonials() {
               >
                 <div className="w-full lg:w-1/2">
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-video">
-                    <Image
-                      src={wedding.image || "/placeholder.svg"}
-                      alt={`${wedding.couple} wedding`}
-                      fill
-                      className="object-cover"
-                    />
+                    <Skeleton className="w-full absolute h-full" />
                     <div className="absolute top-4 right-4 bg-yellow-500/20 backdrop-blur-sm rounded-full p-2">
                       <Heart
                         className="text-yellow-500 fill-current"

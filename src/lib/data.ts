@@ -1,6 +1,13 @@
 import { MenuItem } from "@/types/menu";
 
-export const menuCategories = ["All", "starter", "main", "dessert", "beverage"];
+export const menuCategories = [
+  "All",
+  "starter",
+  "main",
+  "dessert",
+  "salads",
+  "beverage",
+];
 
 export const menuFilters = [
   "Vegetarian",
@@ -20,7 +27,7 @@ export const menuItems: MenuItem[] = [
     price: 700,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752586946/Chicken_Biryani_eqb3jk.jpg",
-    category: "Main Courses",
+    category: "main",
     featured: true,
     dietary: ["Vegetarian", "Chef's Special"],
   },
@@ -32,7 +39,7 @@ export const menuItems: MenuItem[] = [
     price: 150,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752595385/imgi_3_19051999_222637358247615_4317120346470744064_n_xwh1yx.jpg",
-    category: "Beverages",
+    category: "beverage",
     featured: true,
     dietary: ["Vegan", "Gluten-Free"],
   },
@@ -44,7 +51,7 @@ export const menuItems: MenuItem[] = [
     price: 450,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752589022/imgi_37_AC9h4nrSmiXhG0Qy0K7KKPRgg_ujWu1FHUWeQ9QUwc7_oLWdU6pq5vMZ39PiRF-ThawcmeluCfz3UXSxPCK0Mrj2OX0DsYxsWcjGDdJzBEos4YaSGz81tSGKKV9CiSEGK84qGi9pE92g_s580-k-no_iojtrf.jpg",
-    category: "Main Courses",
+    category: "main",
     featured: true,
     dietary: ["Spicy"],
   },
@@ -56,7 +63,7 @@ export const menuItems: MenuItem[] = [
     price: 400,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752595174/imgi_14_18579632_1498366690184483_3373633026448687104_n_rwd7dj.jpg",
-    category: "Salads",
+    category: "salads",
     featured: true,
     dietary: ["Gluten-Free"],
   },
@@ -68,7 +75,7 @@ export const menuItems: MenuItem[] = [
     price: 300,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752590400/imgi_48_AF1QipMY_5bFcHtjmEG6Nufzggbs-fT3Zh3QpH-AfRzo_s609-k-no_ibcv1p.jpg",
-    category: "Beverages",
+    category: "beverage",
     featured: true,
     dietary: ["Vegetarian", "Sweet Treat"],
   },
@@ -80,7 +87,7 @@ export const menuItems: MenuItem[] = [
     price: 550,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752595081/imgi_10_18580575_414793855573391_7777672047722758144_n_kop9hs.jpg",
-    category: "Main Courses",
+    category: "main",
     featured: true,
     dietary: ["High Protein", "Kenyan Classic"],
   },
@@ -92,7 +99,7 @@ export const menuItems: MenuItem[] = [
     price: 250,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599221/juice_clgy4p.jpg",
-    category: "Desserts & Beverages",
+    category: "beverage",
     featured: true,
     dietary: ["Vegetarian", "Gluten-Free"],
   },
@@ -104,7 +111,7 @@ export const menuItems: MenuItem[] = [
     price: 550,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599230/salad_cllrlo.jpg",
-    category: "Salads",
+    category: "salads",
     featured: true,
     dietary: ["High Protein", "Gluten-Free", "Tropical"],
   },
@@ -116,7 +123,7 @@ export const menuItems: MenuItem[] = [
     price: 1200,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752598903/imgi_20_18512627_1340716886012730_3091618838068854784_n_zrs6kt.jpg",
-    category: "Main Courses",
+    category: "main",
     featured: true,
     dietary: ["Spiced", "Group Meal", "Halal Friendly"],
   },
@@ -128,7 +135,7 @@ export const menuItems: MenuItem[] = [
     price: 350,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599228/icecream_pbb4fr.jpg",
-    category: "Desserts",
+    category: "dessert",
     featured: true,
     dietary: ["Vegetarian", "Sweet Treat", "Chilled Dessert"],
   },
@@ -140,7 +147,7 @@ export const menuItems: MenuItem[] = [
     price: 700,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599230/ricepotatoes_j0nbil.jpg",
-    category: "Main Courses",
+    category: "main",
     featured: true,
     dietary: ["Spiced", "Hearty Meal", "Halal Friendly"],
   },
@@ -152,7 +159,7 @@ export const menuItems: MenuItem[] = [
     price: 750,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599220/imgi_4_19050135_266720253802665_5099028510031216640_n_ctjr46.jpg",
-    category: "Main Courses",
+    category: "main",
     featured: true,
     dietary: ["Spicy"],
   },
@@ -164,7 +171,7 @@ export const menuItems: MenuItem[] = [
     price: 820,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599224/imgi_13_18514063_130342017525944_5463796908499664896_n_nqvyni.jpg",
-    category: "Main Courses",
+    category: "main",
     featured: true,
     dietary: ["Gluten-Free", "Dairy-Free"],
   },
@@ -176,7 +183,7 @@ export const menuItems: MenuItem[] = [
     price: 350,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599231/imgi_6_18809274_224490641389979_3602125419739873280_n_vf0lcs.jpg",
-    category: "Sides & Salads",
+    category: "salads",
     featured: true,
     dietary: ["Vegan", "Gluten-Free", "Dairy-Free"],
   },
@@ -188,7 +195,7 @@ export const menuItems: MenuItem[] = [
     price: 300,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599234/imgi_30_18646659_1045038015631315_2119548008180744192_n_pnet2w.jpg",
-    category: "Desserts",
+    category: "dessert",
     featured: true,
     dietary: ["Vegetarian"],
   },
@@ -200,7 +207,7 @@ export const menuItems: MenuItem[] = [
     price: 600,
     image:
       "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752599237/imgi_5_18809672_790616011087527_1954340862779457536_n_zhx50l.jpg",
-    category: "Sides & Salads",
+    category: "salads",
     featured: true,
     dietary: ["Vegetarian", "Dairy-Free"],
   },
@@ -246,20 +253,38 @@ export const weddingGallery = [
 
 export const galleryImages = [
   // Food images from menuItems
-  ...menuItems.map((item, index) => ({
-    id: index + 1,
+  ...menuItems.map((item) => ({
     src: item.image,
     alt: item.name,
     category: "Food",
   })),
 
   // Wedding images
-  ...weddingGallery.map((item, index) => ({
-    id: menuItems.length + index + 1,
+  ...weddingGallery.map((item) => ({
     src: item.src,
     alt: item.caption,
     category: "Wedding",
   })),
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752584650/imgi_27_AC9h4npAuT1VtCfpP372ogkKDHkxEaOU7_vxxV6IN5gZjSofCJslZReUsklTqtKTaQoiHffrozfXH8h-YZ-Jh8HJCyHd2UIdJdryY5NqJwJJkdqVVzutpVGwEyRQlTyF8Xb_3xgpmAm8H0dGy-Aj_s676-k-no_pcdelm.jpg",
+    alt: "interior image",
+    category: "Interior",
+  },
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752653972/atmosphere2_wmszrh.jpg",
+    alt: "interior image",
+    category: "Interior",
+  },
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752585833/tiktok.5_jmcrrd.png",
+    alt: "interior image",
+    category: "Interior",
+  },
+  {
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1752585592/tiktok4_f96ics.png",
+    alt: "interior image",
+    category: "Interior",
+  },
 ];
 
 export const faqItems = [
@@ -302,7 +327,7 @@ export const teamMembers = [
     id: 2,
     name: "Olivia Bennett",
     role: "Pastry Chef",
-    bio: "Trained in Paris, Olivia creates desserts that are both visually stunning and extraordinarily delicious, adding the perfect finale to every meal.",
+    bio: "Trained in Paris, Olivia creates dessert that are both visually stunning and extraordinarily delicious, adding the perfect finale to every meal.",
     image: "/placeholder.svg?height=400&width=300",
   },
   {

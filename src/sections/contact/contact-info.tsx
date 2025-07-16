@@ -22,7 +22,7 @@ export const contactItems: ContactItem[] = [
       {
         type: "link",
         href: "tel:+15551234567",
-        value: "(555) 123-4567",
+        value: "0722 720697",
       },
       {
         type: "label",

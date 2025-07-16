@@ -24,7 +24,7 @@ const contactData = [
   {
     icon: Phone,
     label: "Phone",
-    value: "(555) 123-4567",
+    value: "0722 720697",
   },
   {
     icon: Mail,
@@ -119,7 +119,7 @@ export default function Page() {
           <div className="container mx-auto px-4 text-center">
             <p>
               For immediate assistance or same-day reservations, please call us
-              directly at <span className="font-semibold">(555) 123-4567</span>
+              directly at <span className="font-semibold">0722 720697</span>
             </p>
           </div>
         </div>
