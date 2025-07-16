@@ -34,7 +34,7 @@ export function MenuShowcase() {
       id="menu-showcase"
       aria-labelledby="menu-showcase-header"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="max-w-6xl mx-auto flex flex-col items-center">
           <div className="text-center mb-16">
             <h2

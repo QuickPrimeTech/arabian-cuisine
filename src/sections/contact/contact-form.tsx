@@ -48,7 +48,7 @@ export default function ContactForm() {
 
   return (
     <section className="section py-16">
-      <div className="container flex flex-col items-center px-4">
+      <div className="container flex flex-col items-center">
         <Card className="w-full max-w-2xl py-6 bg-white/5 backdrop-blur border border-white/10 shadow-xl">
           <CardHeader>
             <CardTitle className="text-white text-3xl font-bold font-serif">

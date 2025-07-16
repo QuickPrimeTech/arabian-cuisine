@@ -89,7 +89,7 @@ export const contactItems: ContactItem[] = [
 export default function ContactInfo() {
   return (
     <section className="section py-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="max-w-2xl mx-auto lg:mx-0">
           <h2 className="font-serif text-3xl font-bold text-foreground mb-8">
             Contact Information
